@@ -1,12 +1,1 @@
-01-exterior https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_000311_2ff3618d-77ff-4b25-ba8e-731d6cb48fd8.mp4
-02-living-room https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_000313_73a3b1be-8611-4a04-8670-d22a0b9e1d0f.mp4
-03-dining-table https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_000314_9f7cf318-c601-4fe3-95a7-9c157318b43f.mp4
-04-dining-room https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_000316_93559a78-5cb1-40ee-84d5-6654a873dd78.mp4
-05-bedroom-suite https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_000318_02ea56d5-eccf-4402-8e0c-3342db20d5a9.mp4
-06-bedroom-tv https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_000320_febe8840-a1fc-46b9-bef9-efa0da97a5f9.mp4
-07-bedroom-mirror https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_000322_88fae4a9-b097-4726-a1a6-ff68f2a1db6a.mp4
-08-bedroom-desk https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_000324_20ea0f74-e935-47c3-98f3-0ea5b66be02c.mp4
-09-hallway https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_000326_a9b297cf-8550-45ab-b823-49ea499dfd62.mp4
-10-office-nook https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_000328_8f5bb75f-1679-41af-b4bf-bbccccb27b3e.mp4
-11-reading-nook https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_000330_69ff4118-16ac-4c2b-986c-a785b37caf0f.mp4
-12-bunk-room https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_000331_c57bbe3f-abf4-4d55-8b7e-f4b2ef6b1800.mp4
+walkthrough-2k https://d8j0ntlcm91z4.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/hf_20260721_001751_2c072c57-5352-424e-a1c8-45f2399fb56f.mp4
