@@ -1,6 +1,9 @@
 name: Fetch Higgsfield clips
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - claude/connector-toggle-issue-zprx5m
 
 permissions:
   contents: write
@@ -23,5 +26,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add clips/*.mp4
+          git diff --cached --quiet && { echo "nothing to commit"; exit 0; }
           git commit -m "Add downloaded Higgsfield walkthrough clips"
           git push
