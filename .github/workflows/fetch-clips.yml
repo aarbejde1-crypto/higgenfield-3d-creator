@@ -17,6 +17,8 @@ jobs:
         run: |
           while read -r name url; do
             [ -n "$name" ] || continue
+            [ -n "$url" ] || continue
+            case "$name" in \#*) continue ;; esac
             echo "Fetching $name"
             curl -fsSL --retry 3 -o "clips/${name}.mp4" "$url"
           done < clips/urls.txt
