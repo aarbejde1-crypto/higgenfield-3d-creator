@@ -34,6 +34,17 @@ def first_number(text, fallback="—"):
     return digits or fallback
 
 
+def rating_display(text, fallback="—"):
+    """Ratings are usually numeric ("4.78") but a brand-new listing may pass
+    a label like "New" instead — pass those through as-is rather than
+    stripping them down to nothing."""
+    if not text:
+        return fallback
+    if str(text).replace(".", "").isdigit():
+        return first_number(text, fallback)
+    return str(text)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", required=True)
@@ -56,7 +67,8 @@ def main():
     replacements = {
         "[[TITLE]]": esc(title),
         "[[LOCATION]]": esc(data.get("location") or ""),
-        "[[RATING]]": esc(first_number(data.get("rating"))),
+        "[[RATING]]": esc(rating_display(data.get("rating"))),
+        "[[RATING_LABEL]]": "listing" if rating_display(data.get("rating")) == "New" else "★ rating",
         "[[BEDROOMS]]": esc(first_number(data.get("bedrooms"))),
         "[[BEDS]]": esc(first_number(data.get("beds"))),
         "[[BATHS]]": esc(first_number(data.get("baths"))),
