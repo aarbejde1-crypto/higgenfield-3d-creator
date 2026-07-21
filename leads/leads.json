@@ -1,0 +1,43 @@
+{
+  "branch": "claude/connector-toggle-issue-zprx5m",
+  "repo": "aarbejde1-crypto/higgenfield-3d-creator",
+  "leads": [
+    {
+      "slug": "villa-infinium-one",
+      "title": "Villa Infinium ONE",
+      "location": "Agios Stefanos, Mykonos, Greece",
+      "source_url": "https://www.airbnb.dk/rooms/1370124993146969749",
+      "hero_image": "https://a0.muscache.com/im/pictures/miso/Hosting-1370124993146969749/original/22cc301a-704c-4e45-9664-9f4f9bd22d6f.jpeg",
+      "stats": { "bedrooms": "7", "beds": "7", "baths": "6", "guests": "14", "rating": "New" },
+      "status": "ready_to_send",
+      "status_note": "Full kit built. Waiting on your name + WhatsApp number to replace placeholders before sending.",
+      "assets": {
+        "video": "listings/villa-infinium-one/walkthrough.mp4",
+        "video_preview": "listings/villa-infinium-one/walkthrough_preview.mp4",
+        "report": "listings/villa-infinium-one/report.html",
+        "report_preview": "listings/villa-infinium-one/report_preview.html",
+        "outreach_message": "listings/villa-infinium-one/outreach_message.txt"
+      },
+      "updated_at": "2026-07-21"
+    },
+    {
+      "slug": "indre-by-apartment",
+      "title": "Indre By apartment",
+      "location": "Copenhagen, Denmark",
+      "source_url": "https://www.airbnb.dk/rooms/1224585359222360054",
+      "hero_image": null,
+      "stats": { "bedrooms": "4", "beds": "7", "baths": "1", "guests": null, "rating": "4.78" },
+      "status": "video_only",
+      "status_note": "Made before the report/outreach pipeline existed — video only, no sales report or message drafted yet.",
+      "assets": {
+        "video": "walkthrough.mp4",
+        "video_2k": "walkthrough-2k.mp4",
+        "video_preview": null,
+        "report": null,
+        "report_preview": null,
+        "outreach_message": null
+      },
+      "updated_at": "2026-07-21"
+    }
+  ]
+}
