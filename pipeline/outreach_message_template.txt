@@ -1,0 +1,21 @@
+Hi! I came across your Airbnb listing for {{TITLE}} ({{LOCATION}}) — {{DETAIL}}.
+
+I put together a short video tour of it from your own listing photos, just to show what it could look like in motion. No cost, no obligation — here it is: {{REPORT_URL}}
+
+If you like it, message me on WhatsApp ({{WHATSAPP_LINK}}) and I'll send over the clean, full-resolution version plus a couple more ideas for the listing.
+
+— {{YOUR_NAME}}
+
+---
+Design notes (why this avoids reading as a scam):
+- States who's writing and why in the first line — no anonymity.
+- Leads with something free and already delivered (the video/report link),
+  not a request. Nothing is asked of them before they see value.
+- No urgency/scarcity language ("act now", "limited time", "spot reserved").
+- No payment, personal info, or click-a-suspicious-link ask — the link
+  goes to a page on GitHub they can inspect, not a redirect chain.
+- The specific detail placeholder ({{DETAIL}}) should reference something
+  real from the listing (bed count, a standout feature) so it doesn't read
+  as a mass-blasted template, even though it's templated.
+- WhatsApp is offered as a *next step after* they've seen value, not the
+  first ask — reduces the "why would I move platforms for a stranger" friction.
