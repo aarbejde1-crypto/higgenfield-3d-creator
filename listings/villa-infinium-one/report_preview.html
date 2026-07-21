@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Villa Infinium ONE — Listing Video Upgrade</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #0f1115;
+    --panel: #171a21;
+    --text: #f2f3f5;
+    --muted: #9aa1ac;
+    --accent: #ff5a5f;
+    --border: #262a33;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f7f8;
+      --panel: #ffffff;
+      --text: #1b1d21;
+      --muted: #5c6470;
+      --border: #e4e6ea;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1115; --panel: #171a21; --text: #f2f3f5; --muted: #9aa1ac; --border: #262a33;
+  }
+  :root[data-theme="light"] {
+    --bg: #f7f7f8; --panel: #ffffff; --text: #1b1d21; --muted: #5c6470; --border: #e4e6ea;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 0 48px; }
+  .hero {
+    position: relative; height: 42vh; min-height: 260px; max-height: 420px;
+    background-size: cover; background-position: center;
+    background-image: url("https://a0.muscache.com/im/pictures/miso/Hosting-1370124993146969749/original/22cc301a-704c-4e45-9664-9f4f9bd22d6f.jpeg");
+    display: flex; align-items: flex-end;
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 100%);
+  }
+  .hero-content { position: relative; z-index: 1; padding: 24px; color: #fff; }
+  .hero h1 { margin: 0 0 6px; font-size: 1.6rem; }
+  .hero .loc { margin: 0; opacity: 0.9; font-size: 0.95rem; }
+  .stats {
+    display: flex; gap: 18px; flex-wrap: wrap; padding: 18px 24px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem; color: var(--muted);
+  }
+  .stats strong { color: var(--text); }
+  section { padding: 24px; }
+  h2 { font-size: 1.1rem; margin: 0 0 12px; }
+  video {
+    width: 100%; border-radius: 12px; background: #000; display: block;
+  }
+  .pitch { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .pitch ul { margin: 8px 0 0; padding-left: 20px; }
+  .pitch li { margin-bottom: 8px; }
+  .photos {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 8px;
+  }
+  .photos img {
+    width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .cta {
+    display: flex; gap: 12px; flex-wrap: wrap; padding: 24px;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px; border-radius: 999px; text-decoration: none;
+    font-weight: 600; font-size: 0.95rem; border: 1px solid var(--border);
+  }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn.whatsapp { background: #25D366; color: #073b1e; border-color: #25D366; }
+  .btn.secondary { background: var(--panel); color: var(--text); }
+  .preview-note {
+    margin: 0 24px 8px; padding: 10px 14px; border-radius: 8px;
+    background: rgba(255,90,95,0.12); border: 1px solid rgba(255,90,95,0.35);
+    font-size: 0.85rem; color: var(--text);
+  }
+  footer { padding: 0 24px; color: var(--muted); font-size: 0.8rem; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Villa Infinium ONE</h1>
+      <p class="loc">Agios Stefanos, Mykonos, Greece</p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <span><strong>New</strong> listing</span>
+    <span><strong>7</strong> bedrooms</span>
+    <span><strong>7</strong> beds</span>
+    <span><strong>6</strong> baths</span>
+    <span><strong>14</strong> guests</span>
+  </div>
+
+  <div class="preview-note">This is a watermarked preview. Message me on WhatsApp and I'll send the clean, full-resolution version.</div>
+
+  <section>
+    <h2>Your new listing video</h2>
+    <video controls playsinline poster="https://a0.muscache.com/im/pictures/miso/Hosting-1370124993146969749/original/22cc301a-704c-4e45-9664-9f4f9bd22d6f.jpeg">
+      <source src="https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/connector-toggle-issue-zprx5m/listings/villa-infinium-one/walkthrough_preview.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <section>
+    <div class="pitch">
+      <h2>Why this helps you book faster</h2>
+      <ul>
+        <li>A villa this size — 7 bedrooms, a private pool, and sunset views over the Aegean — deserves more than static photos in search results.</li>
+        <li>This flythrough tour lets guests experience the pool, grounds, and every bedroom in motion before they ever land on Mykonos.</li>
+        <li>Premium listings with video consistently pull higher click-through and faster bookings at this price tier — a small production cost against a high nightly rate.</li>
+        <li>Built entirely from your existing listing photos — no reshoot, no drone permit, no extra cost to you.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Photos used</h2>
+    <div class="photos">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1370124993146969749/original/22cc301a-704c-4e45-9664-9f4f9bd22d6f.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1370124993146969749/original/4c02f043-2eff-47f9-928d-5d20ce5ab54c.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1370124993146969749/original/1dc6e03e-d002-464b-a4e5-bd369cf7efc2.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM3MDEyNDk5MzE0Njk2OTc0OQ==/original/dccef023-2f8b-487d-bc6f-3ba3920b8235.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM3MDEyNDk5MzE0Njk2OTc0OQ==/original/314b394d-c778-4322-974e-af8cb1f9ca2b.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1370124993146969749/original/9fe83b4d-c07b-4e7b-a04c-603eb3dee382.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTM3MDEyNDk5MzE0Njk2OTc0OQ==/original/dfe24cf4-31e5-4cc3-bfb3-6b8e1b1f4b13.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1370124993146969749/original/7b06d8ef-310c-4172-855f-7e9221a9384e.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1370124993146969749/original/3fd0043e-531a-4181-900f-c19029ed63e8.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1370124993146969749/original/2f16f7eb-188e-4dae-860f-0a2a85bd07d1.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-1370124993146969749/original/703523dd-2490-4caa-9f07-5b4bf612b945.jpeg" alt="listing photo" loading="lazy">
+    </div>
+  </section>
+
+  <div class="cta">
+    <a class="btn whatsapp" href="https://wa.me/?text=Hi%21%20I%20saw%20the%20video%20tour%20of%20Villa%20Infinium%20ONE%20%E2%80%94%20tell%20me%20more%3F" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    <a class="btn secondary" href="sms:?&body=Check%20out%20the%20new%20video%20tour%20for%20Villa%20Infinium%20ONE%3A%20https%3A//raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/connector-toggle-issue-zprx5m/listings/villa-infinium-one/walkthrough_preview.mp4">Text me this</a>
+    <a class="btn secondary" href="https://www.airbnb.dk/rooms/1370124993146969749" target="_blank" rel="noopener">View original listing</a>
+  </div>
+
+  <footer>
+    Generated from https://www.airbnb.dk/rooms/1370124993146969749 — video created with an AI camera-motion pipeline from the listing's own photos.
+  </footer>
+</div>
+</body>
+</html>
