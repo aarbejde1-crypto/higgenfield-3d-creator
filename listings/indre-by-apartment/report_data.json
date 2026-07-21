@@ -1,0 +1,32 @@
+{
+  "title": "Indre By apartment",
+  "location": "Indre By, Copenhagen, Denmark",
+  "listing_url": "https://www.airbnb.dk/rooms/1224585359222360054",
+  "source_url": "https://www.airbnb.dk/rooms/1224585359222360054",
+  "heroImage": "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/01-exterior.jpg",
+  "rating": "4.78",
+  "bedrooms": "4",
+  "beds": "7",
+  "baths": "1",
+  "guests": "10",
+  "photos": [
+    "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/01-exterior.jpg",
+    "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/02-living-room.jpg",
+    "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/03-dining-table.jpg",
+    "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/04-dining-room.jpg",
+    "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/05-bedroom-suite.jpg",
+    "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/06-bedroom-tv.jpg",
+    "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/07-bedroom-mirror.jpg",
+    "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/08-bedroom-desk.jpg",
+    "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/09-hallway.jpg",
+    "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/10-office-nook.jpg",
+    "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/11-reading-nook.jpg",
+    "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/12-bunk-room.jpg"
+  ],
+  "pitch_bullets": [
+    "A 4-bedroom, sleeps-10 apartment in the heart of Indre By — steps from the Round Tower and Strøget — is exactly the kind of listing groups filter for, but static photos undersell how much space is actually in here.",
+    "This walkthrough shows the living room, dining room, all four bedrooms, and the bunk room in sequence — the layout a big group actually needs to see before booking.",
+    "Group/family listings at this size compete on 'can everyone actually fit' — motion answers that faster than a photo grid does.",
+    "Built entirely from your existing listing photos — no reshoot, no extra cost to you."
+  ]
+}
