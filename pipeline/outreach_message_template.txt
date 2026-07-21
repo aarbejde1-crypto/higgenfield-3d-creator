@@ -5,6 +5,7 @@ I put together a short video tour of it from your own listing photos, just to sh
 If you like it, message me on WhatsApp ({{WHATSAPP_LINK}}) and I'll send over the clean, full-resolution version plus a couple more ideas for the listing.
 
 — {{YOUR_NAME}}
+{{EMAIL_LINE}}
 
 ---
 Design notes (why this avoids reading as a scam):

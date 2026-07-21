@@ -17,6 +17,7 @@ def main():
     ap.add_argument("--report-url", required=True)
     ap.add_argument("--whatsapp", required=True, help="wa.me link or number")
     ap.add_argument("--your-name", required=True)
+    ap.add_argument("--email", help="optional alternate contact")
     ap.add_argument("--out", required=True)
     ap.add_argument(
         "--template",
@@ -39,6 +40,7 @@ def main():
         .replace("{{REPORT_URL}}", args.report_url)
         .replace("{{WHATSAPP_LINK}}", whatsapp)
         .replace("{{YOUR_NAME}}", args.your_name)
+        .replace("{{EMAIL_LINE}}", args.email or "")
     )
 
     Path(args.out).write_text(message + "\n")
