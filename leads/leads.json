@@ -9,8 +9,8 @@
       "source_url": "https://www.airbnb.dk/rooms/1370124993146969749",
       "hero_image": "https://a0.muscache.com/im/pictures/miso/Hosting-1370124993146969749/original/22cc301a-704c-4e45-9664-9f4f9bd22d6f.jpeg",
       "stats": { "bedrooms": "7", "beds": "7", "baths": "6", "guests": "14", "rating": "New" },
-      "status": "ready_to_send",
-      "status_note": "Full kit built. Waiting on your name + WhatsApp number to replace placeholders before sending.",
+      "status": "sent",
+      "status_note": "Contacted the host. Waiting to hear back.",
       "assets": {
         "video": "listings/villa-infinium-one/walkthrough.mp4",
         "video_preview": "listings/villa-infinium-one/walkthrough_preview.mp4",
@@ -25,17 +25,17 @@
       "title": "Indre By apartment",
       "location": "Copenhagen, Denmark",
       "source_url": "https://www.airbnb.dk/rooms/1224585359222360054",
-      "hero_image": null,
-      "stats": { "bedrooms": "4", "beds": "7", "baths": "1", "guests": null, "rating": "4.78" },
-      "status": "video_only",
-      "status_note": "Made before the report/outreach pipeline existed — video only, no sales report or message drafted yet.",
+      "hero_image": "https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/new-session-4l1rb0/photos/01-exterior.jpg",
+      "stats": { "bedrooms": "4", "beds": "7", "baths": "1", "guests": "10", "rating": "4.78" },
+      "status": "ready_to_send",
+      "status_note": "Full kit built. Waiting on your name + WhatsApp number to replace placeholders before sending.",
       "assets": {
-        "video": "walkthrough.mp4",
-        "video_2k": "walkthrough-2k.mp4",
-        "video_preview": null,
-        "report": null,
-        "report_preview": null,
-        "outreach_message": null
+        "video": "listings/indre-by-apartment/walkthrough.mp4",
+        "video_2k": "listings/indre-by-apartment/walkthrough-2k.mp4",
+        "video_preview": "listings/indre-by-apartment/walkthrough_preview.mp4",
+        "report": "listings/indre-by-apartment/report.html",
+        "report_preview": "listings/indre-by-apartment/report_preview.html",
+        "outreach_message": "listings/indre-by-apartment/outreach_message.txt"
       },
       "updated_at": "2026-07-21"
     }
