@@ -56,8 +56,12 @@ def main():
 
     filters = []
     for i in range(len(paths)):
+        # scale to cover the target box (preserving aspect ratio, whatever the
+        # source orientation), then center-crop — avoids stretching clips
+        # whose source photo (and therefore generated video) came back in a
+        # different aspect ratio than requested.
         filters.append(
-            f"[{i}:v]scale={args.width}:{round(args.height*16/9)}:flags=lanczos,"
+            f"[{i}:v]scale=w={args.width}:h={args.height}:force_original_aspect_ratio=increase:flags=lanczos,"
             f"crop={args.width}:{args.height},setsar=1,fps=24,format=yuv420p[v{i}]"
         )
 
