@@ -52,6 +52,8 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--template", default=str(Path(__file__).parent / "report_template.html"))
     ap.add_argument("--max-photos", type=int, default=12)
+    ap.add_argument("--whatsapp", help="WhatsApp number (e.g. +4512345678) or a full wa.me link")
+    ap.add_argument("--preview", action="store_true", help="Mark this as a watermarked preview copy (adds a banner)")
     args = ap.parse_args()
 
     data = json.loads(Path(args.data).read_text())
@@ -82,6 +84,29 @@ def main():
     out_html = template
     for token, value in replacements.items():
         out_html = out_html.replace(token, value)
+
+    if args.whatsapp:
+        wa_message = urllib.parse.quote(
+            f"Hi! I saw the video tour of {title} — tell me more?"
+        )
+        if args.whatsapp.startswith("http"):
+            wa_link = args.whatsapp
+        else:
+            digits = "".join(c for c in args.whatsapp if c.isdigit())
+            wa_link = f"https://wa.me/{digits}?text={wa_message}"
+        wa_button = f'    <a class="btn whatsapp" href="{esc(wa_link)}" target="_blank" rel="noopener">Chat on WhatsApp</a>'
+        out_html = out_html.replace("<!--WHATSAPP_BUTTON-->", wa_button)
+    else:
+        out_html = out_html.replace("<!--WHATSAPP_BUTTON-->", "")
+
+    if args.preview:
+        note = (
+            '  <div class="preview-note">This is a watermarked preview. '
+            "Message me on WhatsApp and I'll send the clean, full-resolution version.</div>"
+        )
+        out_html = out_html.replace("<!--PREVIEW_NOTE-->", note)
+    else:
+        out_html = out_html.replace("<!--PREVIEW_NOTE-->", "")
 
     bullets = data.get("pitch_bullets") or DEFAULT_PITCH
     bullets_html = "\n".join(f"        <li>{esc(b)}</li>" for b in bullets)
