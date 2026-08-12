@@ -32,7 +32,9 @@ def main():
     ap.add_argument("--clips-dir", required=True)
     ap.add_argument("--manifest", required=True, help="text file, one clip filename per line, in order")
     ap.add_argument("--out", required=True)
-    ap.add_argument("--fade", type=float, default=0.5)
+    ap.add_argument("--fade", type=float, default=0.5,
+                    help="crossfade seconds between clips; 0 = straight concat "
+                         "(for clips whose joins already share a matching frame)")
     ap.add_argument("--width", type=int, default=1280)
     ap.add_argument("--height", type=int, default=720)
     ap.add_argument("--crf", type=int, default=18)
@@ -65,16 +67,26 @@ def main():
             f"crop={args.width}:{args.height},setsar=1,fps=24,format=yuv420p[v{i}]"
         )
 
-    prev = "v0"
-    cumulative = durations[0]
-    for k in range(1, len(paths)):
-        offset = round(cumulative - args.fade, 4)
-        out_label = f"x{k}" if k < len(paths) - 1 else "vout"
-        filters.append(
-            f"[{prev}][v{k}]xfade=transition=fade:duration={args.fade}:offset={offset}[{out_label}]"
-        )
-        prev = out_label
-        cumulative += durations[k] - args.fade
+    if args.fade == 0:
+        # Straight concatenation. Use this when consecutive clips already share
+        # a matching frame at the join — e.g. clips generated with an end_image
+        # that is the next clip's start_image. Crossfading those would blur a
+        # join that is already seamless.
+        prev = "vout"
+        concat_inputs = "".join(f"[v{i}]" for i in range(len(paths)))
+        filters.append(f"{concat_inputs}concat=n={len(paths)}:v=1:a=0[vout]")
+        cumulative = sum(durations)
+    else:
+        prev = "v0"
+        cumulative = durations[0]
+        for k in range(1, len(paths)):
+            offset = round(cumulative - args.fade, 4)
+            out_label = f"x{k}" if k < len(paths) - 1 else "vout"
+            filters.append(
+                f"[{prev}][v{k}]xfade=transition=fade:duration={args.fade}:offset={offset}[{out_label}]"
+            )
+            prev = out_label
+            cumulative += durations[k] - args.fade
 
     filter_complex = ";".join(filters)
 
