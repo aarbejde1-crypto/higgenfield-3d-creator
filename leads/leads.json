@@ -47,10 +47,12 @@
       "hero_image": "https://a0.muscache.com/im/pictures/fa01c3f1-395c-4afe-918c-c350e96ae022.jpg",
       "stats": { "bedrooms": "1", "beds": "1", "baths": "1", "guests": "2", "rating": "4.98" },
       "status": "ready_to_send",
-      "status_note": "Self-sourced lead (Airbnb's own \"extraordinary listings\" page) — not yet contacted. Full kit built with real contact details; your call whether to reach out.",
+      "status_note": "Self-sourced lead — not yet contacted. Sendable kit is the 720p all-8-spaces cut. A seamless 1080p rebuild covers 5 of 8 so far (missing bedroom, bathroom, backyard); needs ~60 credits to finish, then it replaces the 720p version.",
       "assets": {
         "video": "listings/wee-nook-hobbit-hole/walkthrough.mp4",
         "video_preview": "listings/wee-nook-hobbit-hole/walkthrough_preview.mp4",
+        "video_flowing_partial": "listings/wee-nook-hobbit-hole/walkthrough_flowing.mp4",
+        "video_flowing_partial_preview": "listings/wee-nook-hobbit-hole/walkthrough_flowing_preview.mp4",
         "report": "listings/wee-nook-hobbit-hole/report.html",
         "report_preview": "listings/wee-nook-hobbit-hole/report_preview.html",
         "outreach_message": "listings/wee-nook-hobbit-hole/outreach_message.txt"

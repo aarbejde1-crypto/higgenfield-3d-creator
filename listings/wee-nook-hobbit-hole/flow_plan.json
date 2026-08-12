@@ -1,0 +1,40 @@
+{
+  "note": "Seamless-flythrough build. Each link is generated with MiniMax H3 using start_image = space A's photo and end_image = space B's photo, so consecutive links share a matching frame and concatenate with --fade 0 (no cuts). ~20 credits per link at 5s/2K.",
+  "media_ids": {
+    "exterior": "bd6974a6-5bdb-4936-9787-5855b562bb8c",
+    "patio": "19fc61c3-d6eb-4467-8527-5a5b50a8823e",
+    "living-room": "f0b2a23b-5325-4fab-81da-43e904ec940d",
+    "kitchen": "43ed55c6-36a3-4172-9aa8-4ad95239287e",
+    "dining": "b392c84e-03c5-407d-8aa3-362e1c94da8a",
+    "bedroom": "826a5f2b-2473-411c-abae-2b092f042db8",
+    "bathroom": "c32c6dca-c826-4ed4-ac7c-d0f3a6c7c1af",
+    "backyard": "43cbad88-0780-482c-b13c-dfcd76b0fb6c"
+  },
+  "links_done": [
+    { "file": "clips_flow/t1-exterior-patio.mp4", "from": "exterior", "to": "patio", "job_id": "c007cce8-f685-4e96-bbe9-ad634192c5d7" },
+    { "file": "clips_flow/t2-patio-living.mp4", "from": "patio", "to": "living-room", "job_id": "ee5c85fa-10bd-4e26-b69e-fa6932c6c925" },
+    { "file": "clips_flow/t3-living-kitchen.mp4", "from": "living-room", "to": "kitchen", "job_id": "543d3cec-bc6f-4338-a304-138fa2eefdfa" },
+    { "file": "clips_flow/t4-kitchen-dining.mp4", "from": "kitchen", "to": "dining", "job_id": "2e5a69c0-5d15-46e0-af05-b59736daa9a4" }
+  ],
+  "links_remaining": [
+    {
+      "file": "clips_flow/t5-dining-bedroom.mp4", "from": "dining", "to": "bedroom",
+      "prompt": "Continuous cinematic drone flight: the camera glides smoothly from the dining area through into the bedroom. One unbroken flowing camera move, steady gentle speed, no cuts. Scene completely static: no people, bed and furniture unchanged, no warping of walls or geometry. Real-estate walkthrough footage."
+    },
+    {
+      "file": "clips_flow/t6-bedroom-bathroom.mp4", "from": "bedroom", "to": "bathroom",
+      "prompt": "Continuous cinematic drone flight: the camera glides smoothly from the bedroom through into the bathroom. One unbroken flowing camera move, steady gentle speed, no cuts. Scene completely static: no people, fixtures and furniture unchanged, no warping of walls or geometry. Real-estate walkthrough footage."
+    },
+    {
+      "file": "clips_flow/t7-bathroom-backyard.mp4", "from": "bathroom", "to": "backyard",
+      "prompt": "Continuous cinematic drone flight: the camera glides smoothly out from the bathroom and outdoors, rising gently to reveal the wooded backyard. One unbroken flowing camera move, steady gentle speed, no cuts. Scene completely static: no people, landscaping unchanged, no warping of geometry. Real-estate walkthrough footage."
+    }
+  ],
+  "gotchas": [
+    "MiniMax H3 caps concurrent jobs — submit at most 2 at a time or the rest return 429; each 2K clip takes roughly 5-10 minutes.",
+    "kling3_0 is cheaper per clip (8.75 vs 20) and also supports end_image, but returns 403 on the Starter plan — it needs Pro or Ultimate.",
+    "Output ignores aspect_ratio and comes back 4:3-ish (e.g. 1920x1440, 2176x1440); stitch.py's scale-to-cover + centre-crop handles that to clean 1920x1080.",
+    "Foliage-heavy footage encodes large: crf 21 gave 46MB for 20s. Use watermark.py --crf 26 for a sendable preview."
+  ],
+  "stitch_command": "python3 pipeline/stitch.py --clips-dir listings/wee-nook-hobbit-hole/clips_flow --manifest listings/wee-nook-hobbit-hole/clips_flow/order.txt --out listings/wee-nook-hobbit-hole/walkthrough_flowing.mp4 --fade 0 --width 1920 --height 1080 --crf 21"
+}
