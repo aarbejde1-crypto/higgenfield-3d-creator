@@ -38,6 +38,24 @@
         "outreach_message": "listings/indre-by-apartment/outreach_message.txt"
       },
       "updated_at": "2026-07-21"
+    },
+    {
+      "slug": "wee-nook-hobbit-hole",
+      "title": "Wee Nook — a Hobbit Hole",
+      "location": "McEwen, Tennessee, USA",
+      "source_url": "https://www.airbnb.com/rooms/22840443",
+      "hero_image": "https://a0.muscache.com/im/pictures/fa01c3f1-395c-4afe-918c-c350e96ae022.jpg",
+      "stats": { "bedrooms": "1", "beds": "1", "baths": "1", "guests": "2", "rating": "4.98" },
+      "status": "new",
+      "status_note": "Self-sourced from Airbnb's own curated \"extraordinary listings\" page (1,047 reviews, 4.98 avg) — not yet contacted or associated with this business in any way. Shot plan (8 clips) is ready in shot_plan.json. Blocked on video generation: Higgsfield credits are at 0.",
+      "assets": {
+        "video": null,
+        "video_preview": null,
+        "report": null,
+        "report_preview": null,
+        "outreach_message": null
+      },
+      "updated_at": "2026-08-12"
     }
   ]
 }
