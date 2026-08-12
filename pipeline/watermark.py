@@ -23,6 +23,9 @@ def main():
     ap.add_argument("--in", dest="inp", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--text", required=True)
+    ap.add_argument("--crf", type=int, default=20,
+                    help="x264 quality; raise it for a smaller file (heavy "
+                         "foliage/detail footage encodes large at low crf)")
     args = ap.parse_args()
 
     t = escape_text(args.text)
@@ -40,7 +43,7 @@ def main():
     cmd = [
         "ffmpeg", "-y", "-i", args.inp,
         "-vf", filter_complex,
-        "-c:v", "libx264", "-crf", "20", "-preset", "slow",
+        "-c:v", "libx264", "-crf", str(args.crf), "-preset", "slow",
         "-c:a", "aac", "-b:a", "128k",
         "-movflags", "+faststart",
         args.out,
