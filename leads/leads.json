@@ -46,14 +46,14 @@
       "source_url": "https://www.airbnb.com/rooms/22840443",
       "hero_image": "https://a0.muscache.com/im/pictures/fa01c3f1-395c-4afe-918c-c350e96ae022.jpg",
       "stats": { "bedrooms": "1", "beds": "1", "baths": "1", "guests": "2", "rating": "4.98" },
-      "status": "new",
-      "status_note": "Self-sourced from Airbnb's own curated \"extraordinary listings\" page (1,047 reviews, 4.98 avg) — not yet contacted or associated with this business in any way. Shot plan (8 clips) is ready in shot_plan.json. Blocked on video generation: Higgsfield credits are at 0.",
+      "status": "ready_to_send",
+      "status_note": "Self-sourced lead (Airbnb's own \"extraordinary listings\" page) — not yet contacted. Full kit built with real contact details; your call whether to reach out.",
       "assets": {
-        "video": null,
-        "video_preview": null,
-        "report": null,
-        "report_preview": null,
-        "outreach_message": null
+        "video": "listings/wee-nook-hobbit-hole/walkthrough.mp4",
+        "video_preview": "listings/wee-nook-hobbit-hole/walkthrough_preview.mp4",
+        "report": "listings/wee-nook-hobbit-hole/report.html",
+        "report_preview": "listings/wee-nook-hobbit-hole/report_preview.html",
+        "outreach_message": "listings/wee-nook-hobbit-hole/outreach_message.txt"
       },
       "updated_at": "2026-08-12"
     }

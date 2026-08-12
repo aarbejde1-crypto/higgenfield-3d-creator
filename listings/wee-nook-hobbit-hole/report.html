@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wee Nook — a Hobbit Hole — Listing Video Upgrade</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #0f1115;
+    --panel: #171a21;
+    --text: #f2f3f5;
+    --muted: #9aa1ac;
+    --accent: #ff5a5f;
+    --border: #262a33;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f7f8;
+      --panel: #ffffff;
+      --text: #1b1d21;
+      --muted: #5c6470;
+      --border: #e4e6ea;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1115; --panel: #171a21; --text: #f2f3f5; --muted: #9aa1ac; --border: #262a33;
+  }
+  :root[data-theme="light"] {
+    --bg: #f7f7f8; --panel: #ffffff; --text: #1b1d21; --muted: #5c6470; --border: #e4e6ea;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 0 48px; }
+  .hero {
+    position: relative; height: 42vh; min-height: 260px; max-height: 420px;
+    background-size: cover; background-position: center;
+    background-image: url("https://a0.muscache.com/im/pictures/fa01c3f1-395c-4afe-918c-c350e96ae022.jpg");
+    display: flex; align-items: flex-end;
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 100%);
+  }
+  .hero-content { position: relative; z-index: 1; padding: 24px; color: #fff; }
+  .hero h1 { margin: 0 0 6px; font-size: 1.6rem; }
+  .hero .loc { margin: 0; opacity: 0.9; font-size: 0.95rem; }
+  .stats {
+    display: flex; gap: 18px; flex-wrap: wrap; padding: 18px 24px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem; color: var(--muted);
+  }
+  .stats strong { color: var(--text); }
+  section { padding: 24px; }
+  h2 { font-size: 1.1rem; margin: 0 0 12px; }
+  video {
+    width: 100%; border-radius: 12px; background: #000; display: block;
+  }
+  .pitch { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .pitch ul { margin: 8px 0 0; padding-left: 20px; }
+  .pitch li { margin-bottom: 8px; }
+  .photos {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 8px;
+  }
+  .photos img {
+    width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  .cta {
+    display: flex; gap: 12px; flex-wrap: wrap; padding: 24px;
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px; border-radius: 999px; text-decoration: none;
+    font-weight: 600; font-size: 0.95rem; border: 1px solid var(--border);
+  }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn.whatsapp { background: #25D366; color: #073b1e; border-color: #25D366; }
+  .btn.secondary { background: var(--panel); color: var(--text); }
+  .preview-note {
+    margin: 0 24px 8px; padding: 10px 14px; border-radius: 8px;
+    background: rgba(255,90,95,0.12); border: 1px solid rgba(255,90,95,0.35);
+    font-size: 0.85rem; color: var(--text);
+  }
+  footer { padding: 0 24px; color: var(--muted); font-size: 0.8rem; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Wee Nook — a Hobbit Hole</h1>
+      <p class="loc">McEwen, Tennessee, USA</p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <span><strong>4.98</strong> ★ rating</span>
+    <span><strong>1</strong> bedrooms</span>
+    <span><strong>1</strong> beds</span>
+    <span><strong>1</strong> baths</span>
+    <span><strong>2</strong> guests</span>
+  </div>
+
+
+
+  <section>
+    <h2>Your new listing video</h2>
+    <video controls playsinline poster="https://a0.muscache.com/im/pictures/fa01c3f1-395c-4afe-918c-c350e96ae022.jpg">
+      <source src="https://raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/connector-toggle-issue-zprx5m/listings/wee-nook-hobbit-hole/walkthrough.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <section>
+    <div class="pitch">
+      <h2>Why this helps you book faster</h2>
+      <ul>
+        <li>1,047 reviews at a 4.98 average is a rare combination — this listing is already one of Airbnb&#x27;s top performers in its category, which makes it worth protecting with the best possible presentation.</li>
+        <li>The round door and earthen architecture are the whole story here — video sells that immediately, where photos need a caption to explain what guests are looking at.</li>
+        <li>Distinctive, one-of-a-kind stays are exactly what travelers screenshot and share — a video tour gives that moment something to actually watch, not just a still.</li>
+        <li>Built entirely from your existing listing photos — no reshoot, no extra cost to you.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Photos used</h2>
+    <div class="photos">
+      <img src="https://a0.muscache.com/im/pictures/fa01c3f1-395c-4afe-918c-c350e96ae022.jpg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-22840443/original/efbc7083-eb38-4ad9-a34e-27daade9a5d2.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-22840443/original/e0d29ccf-46bd-4877-b05f-e33463f145a9.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-22840443/original/a13afa40-5ee0-4ea4-8853-6bff6aeb3d15.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-22840443/original/6558a67c-a73f-47c1-b749-af434b37dda1.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-22840443/original/b8c40c7e-a380-4685-be1f-7f9d6a86f8f2.jpeg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/0a92d753-ff67-4e98-b189-9ecec811e684.jpg" alt="listing photo" loading="lazy">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-22840443/original/d0d748ff-cd35-4c6f-bdbb-cc6fafaba5f8.jpeg" alt="listing photo" loading="lazy">
+    </div>
+  </section>
+
+  <div class="cta">
+
+    <a class="btn secondary" href="sms:?&body=Check%20out%20the%20new%20video%20tour%20for%20Wee%20Nook%20%E2%80%94%20a%20Hobbit%20Hole%3A%20https%3A//raw.githubusercontent.com/aarbejde1-crypto/higgenfield-3d-creator/claude/connector-toggle-issue-zprx5m/listings/wee-nook-hobbit-hole/walkthrough.mp4">Text me this</a>
+    <a class="btn secondary" href="https://www.airbnb.com/rooms/22840443" target="_blank" rel="noopener">View original listing</a>
+  </div>
+
+  <footer>
+    Generated from https://www.airbnb.com/rooms/22840443 — video created with an AI camera-motion pipeline from the listing's own photos.
+  </footer>
+</div>
+</body>
+</html>
