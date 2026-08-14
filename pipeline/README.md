@@ -78,6 +78,35 @@ run as MCP tool calls, which only exist inside a Claude session).
    to the user, and/or publish `report.html` as an Artifact if a
    shareable link is wanted.
 
+## Vertical shorts
+
+The landscape walkthrough above is the sales asset for the host. For a
+social cut (TikTok / Reels / YouTube Shorts), build a timestamped
+manuscript first:
+
+```
+python3 pipeline/make_short_script.py \
+  --data listings/<slug>/report_data.json \
+  --shots listings/<slug>/shot_plan.json \
+  --out-json listings/<slug>/short_script.json \
+  --out-md   listings/<slug>/short_script.md \
+  --duration 24 [--hook "..."] [--cta "..."]
+```
+
+It plans a 3s hook, evenly-divided room beats, and a 3s closing card,
+then writes the same plan twice: `.md` is the manuscript to read and
+edit (timecode table plus per-beat camera / on-screen text / voiceover),
+`.json` is the machine-readable version whose `beats[].prompt` feeds
+`generate_video` at 9:16.
+
+Runtime drives the beat count: too short and it trims spaces to hold a
+2s floor, too long and it stretches the remaining beats. A duration that
+cannot fit hook + CTA fails rather than emitting a broken plan.
+
+Edit the manuscript before generating — the generated captions are
+sound defaults, not final copy, and the hook is what actually decides
+whether the short is watched.
+
 ## Known limitations
 
 - This simulates a flythrough via per-room clips + crossfades. It is
