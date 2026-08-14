@@ -1,0 +1,639 @@
+<title>Manuscript Maker</title>
+<style>
+  :root {
+    --ground: #f4f3ef;
+    --panel: #ffffff;
+    --sunk: #eceae4;
+    --ink: #1a1d23;
+    --ink-soft: #5c6069;
+    --ink-faint: #8b8f98;
+    --edge: rgba(26,29,35,0.14);
+    --edge-soft: rgba(26,29,35,0.07);
+    --accent: #a8661c;
+    --accent-ink: #ffffff;
+    --hook: #b8761f;
+    --hook-bg: rgba(184,118,31,0.16);
+    --body-beat: #3f7488;
+    --body-bg: rgba(63,116,136,0.15);
+    --cta: #96555a;
+    --cta-bg: rgba(150,85,90,0.15);
+    --focus: #1a6f8c;
+    --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0f1216;
+      --panel: #171b21;
+      --sunk: #12161b;
+      --ink: #e8e7e2;
+      --ink-soft: #9aa0a9;
+      --ink-faint: #6e747d;
+      --edge: rgba(232,231,226,0.16);
+      --edge-soft: rgba(232,231,226,0.08);
+      --accent: #e0a340;
+      --accent-ink: #14171b;
+      --hook: #e0a340;
+      --hook-bg: rgba(224,163,64,0.18);
+      --body-beat: #6ba3bb;
+      --body-bg: rgba(107,163,187,0.18);
+      --cta: #c88a90;
+      --cta-bg: rgba(200,138,144,0.18);
+      --focus: #6ec5e8;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0f1216;
+    --panel: #171b21;
+    --sunk: #12161b;
+    --ink: #e8e7e2;
+    --ink-soft: #9aa0a9;
+    --ink-faint: #6e747d;
+    --edge: rgba(232,231,226,0.16);
+    --edge-soft: rgba(232,231,226,0.08);
+    --accent: #e0a340;
+    --accent-ink: #14171b;
+    --hook: #e0a340;
+    --hook-bg: rgba(224,163,64,0.18);
+    --body-beat: #6ba3bb;
+    --body-bg: rgba(107,163,187,0.18);
+    --cta: #c88a90;
+    --cta-bg: rgba(200,138,144,0.18);
+    --focus: #6ec5e8;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 28px 20px 72px; }
+
+  .masthead { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+  h1 {
+    font-size: 1.5rem; margin: 0; letter-spacing: -0.02em; text-wrap: balance;
+  }
+  .lede { color: var(--ink-soft); font-size: 0.92rem; margin: 6px 0 22px; max-width: 60ch; }
+
+  .label {
+    display: block; font-size: 0.68rem; text-transform: uppercase;
+    letter-spacing: 0.09em; color: var(--ink-faint); font-weight: 700; margin-bottom: 5px;
+  }
+
+  .controls {
+    background: var(--panel); border: 1px solid var(--edge); border-radius: 12px;
+    padding: 16px; display: grid; gap: 14px; margin-bottom: 18px;
+  }
+  .row { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 620px) { .row { grid-template-columns: 1fr; } }
+
+  input[type="text"], input[type="number"] {
+    width: 100%; padding: 8px 10px; border-radius: 7px;
+    border: 1px solid var(--edge); background: var(--sunk); color: var(--ink);
+    font-family: var(--sans); font-size: 0.9rem;
+  }
+  input:focus-visible, button:focus-visible, select:focus-visible {
+    outline: 2px solid var(--focus); outline-offset: 2px;
+  }
+
+  .runtime-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  input[type="range"] { flex: 1; min-width: 180px; accent-color: var(--accent); }
+  .runtime-val {
+    font-family: var(--mono); font-variant-numeric: tabular-nums;
+    font-size: 1.35rem; font-weight: 700; color: var(--accent); min-width: 4ch;
+  }
+
+  /* Timeline — the shape of the cut, at a glance */
+  .timeline-wrap { margin-bottom: 6px; }
+  .timeline {
+    display: flex; gap: 3px; height: 62px; margin-bottom: 0;
+  }
+  .tl-beat {
+    border-radius: 6px; padding: 7px 8px; overflow: hidden; min-width: 0;
+    display: flex; flex-direction: column; justify-content: space-between;
+    border: 1px solid transparent; cursor: default;
+  }
+  .tl-beat.hook { background: var(--hook-bg); border-color: var(--hook); }
+  .tl-beat.body { background: var(--body-bg); border-color: var(--body-beat); }
+  .tl-beat.cta  { background: var(--cta-bg);  border-color: var(--cta); }
+  .tl-role {
+    font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em;
+    font-weight: 700; white-space: nowrap;
+  }
+  .tl-beat.hook .tl-role { color: var(--hook); }
+  .tl-beat.body .tl-role { color: var(--body-beat); }
+  .tl-beat.cta  .tl-role { color: var(--cta); }
+  .tl-name {
+    font-size: 0.72rem; color: var(--ink); white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis;
+  }
+  .ruler {
+    position: relative; height: 20px; border-top: 1px solid var(--edge);
+    margin-top: 5px;
+  }
+  .tick {
+    position: absolute; top: 0; font-family: var(--mono); font-size: 0.62rem;
+    color: var(--ink-faint); transform: translateX(-50%); padding-top: 3px;
+    font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+  .tick::before {
+    content: ""; position: absolute; top: -1px; left: 50%; width: 1px;
+    height: 4px; background: var(--edge);
+  }
+
+  .warn {
+    background: var(--cta-bg); border: 1px solid var(--cta); color: var(--ink);
+    border-radius: 8px; padding: 10px 12px; font-size: 0.86rem; margin-bottom: 16px;
+  }
+
+  /* Shot list */
+  .shots { display: flex; flex-direction: column; gap: 7px; }
+  .shot {
+    display: grid; grid-template-columns: auto 1fr 1.3fr auto; gap: 8px;
+    align-items: center;
+  }
+  @media (max-width: 620px) {
+    .shot { grid-template-columns: auto 1fr auto; }
+    .shot .cap-in { grid-column: 2 / 4; }
+  }
+  .ord {
+    font-family: var(--mono); font-size: 0.75rem; color: var(--ink-faint);
+    width: 2ch; text-align: right; font-variant-numeric: tabular-nums;
+  }
+  .mini {
+    background: var(--sunk); border: 1px solid var(--edge); color: var(--ink-soft);
+    border-radius: 6px; width: 26px; height: 26px; cursor: pointer; font-size: 0.8rem;
+    line-height: 1; display: inline-flex; align-items: center; justify-content: center;
+  }
+  .mini:hover:not(:disabled) { color: var(--ink); border-color: var(--ink-faint); }
+  .mini:disabled { opacity: 0.35; cursor: not-allowed; }
+  .shot-actions { display: flex; gap: 4px; }
+
+  button.action {
+    background: var(--accent); color: var(--accent-ink); border: 1px solid var(--accent);
+    border-radius: 8px; padding: 9px 15px; font-weight: 650; font-size: 0.86rem;
+    cursor: pointer; font-family: var(--sans);
+  }
+  button.ghost {
+    background: transparent; color: var(--ink); border: 1px solid var(--edge);
+    border-radius: 8px; padding: 9px 15px; font-weight: 600; font-size: 0.86rem;
+    cursor: pointer; font-family: var(--sans);
+  }
+  button.ghost:hover { border-color: var(--ink-faint); }
+  .btn-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+  h2 {
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.09em;
+    color: var(--ink-faint); font-weight: 700; margin: 26px 0 10px;
+  }
+
+  /* Beat cards — the manuscript itself, set to read like a script */
+  .beat {
+    background: var(--panel); border: 1px solid var(--edge); border-radius: 10px;
+    padding: 13px 15px; display: grid; gap: 7px; margin-bottom: 9px;
+    border-left: 3px solid var(--edge);
+  }
+  .beat.hook { border-left-color: var(--hook); }
+  .beat.body { border-left-color: var(--body-beat); }
+  .beat.cta  { border-left-color: var(--cta); }
+  .beat-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .beat-tc {
+    font-family: var(--mono); font-variant-numeric: tabular-nums;
+    font-size: 0.82rem; color: var(--accent); font-weight: 600;
+  }
+  .beat-role {
+    font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em;
+    font-weight: 700; padding: 2px 7px; border-radius: 99px;
+  }
+  .beat.hook .beat-role { background: var(--hook-bg); color: var(--hook); }
+  .beat.body .beat-role { background: var(--body-bg); color: var(--body-beat); }
+  .beat.cta  .beat-role { background: var(--cta-bg);  color: var(--cta); }
+  .beat-shot { font-size: 0.84rem; color: var(--ink-soft); }
+  .caption {
+    font-family: var(--serif); font-size: 1.12rem; line-height: 1.35;
+    color: var(--ink); text-wrap: balance;
+  }
+  .meta { font-size: 0.79rem; color: var(--ink-soft); }
+  .meta b { color: var(--ink); font-weight: 600; }
+  .prompt {
+    font-family: var(--mono); font-size: 0.72rem; color: var(--ink-faint);
+    background: var(--sunk); border-radius: 6px; padding: 7px 9px;
+    overflow-x: auto; white-space: pre-wrap; word-break: break-word;
+  }
+  .over { color: var(--cta); font-weight: 600; }
+  footer {
+    margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--edge-soft);
+    color: var(--ink-faint); font-size: 0.78rem; max-width: 66ch;
+  }
+  .toast {
+    position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
+    background: var(--ink); color: var(--ground); padding: 9px 16px;
+    border-radius: 99px; font-size: 0.84rem; font-weight: 600;
+    opacity: 0; pointer-events: none; transition: opacity .18s;
+  }
+  .toast.show { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .toast { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="masthead"><h1>Manuscript Maker</h1></div>
+    <p class="lede">
+      Plan a vertical short beat by beat. Set the runtime and the shots; the
+      timing, timecodes and per-shot prompts follow. The captions it writes are
+      a starting point — the hook is the line worth your own attention.
+    </p>
+  </header>
+
+  <div class="controls">
+    <div class="row">
+      <div>
+        <label class="label" for="title">Subject</label>
+        <input type="text" id="title" value="Wee Nook — a Hobbit Hole">
+      </div>
+      <div>
+        <label class="label" for="place">Place or context</label>
+        <input type="text" id="place" value="McEwen, Tennessee">
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <label class="label" for="hook">Opening line (the hook)</label>
+        <input type="text" id="hook" value="4.98★ — and you can actually book it">
+      </div>
+      <div>
+        <label class="label" for="cta">Closing line</label>
+        <input type="text" id="cta" value="McEwen · link in bio">
+      </div>
+    </div>
+    <div>
+      <label class="label" for="dur">Runtime</label>
+      <div class="runtime-row">
+        <input type="range" id="dur" min="10" max="60" step="1" value="24">
+        <span class="runtime-val" id="durVal">24s</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="timeline-wrap">
+    <span class="label">The cut</span>
+    <div class="timeline" id="timeline"></div>
+    <div class="ruler" id="ruler"></div>
+  </div>
+
+  <div id="warnSlot"></div>
+
+  <h2>Shots — in the order they appear</h2>
+  <div class="shots" id="shots"></div>
+  <div class="btn-row" style="margin-top:11px">
+    <button class="ghost" id="addShot">Add shot</button>
+    <button class="action" id="copyMd">Copy manuscript</button>
+    <button class="ghost" id="copyJson">Copy JSON</button>
+  </div>
+
+  <h2>Manuscript</h2>
+  <div id="beats"></div>
+
+  <footer>
+    Landscape photos lose their sides in a 9:16 crop, so the camera moves here
+    favour push-ins and tilts over pans. Keep captions under about 40 characters
+    and they will clear the platform's own buttons.
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  "use strict";
+
+  var HOOK_S = 3, CTA_S = 3, MIN_BEAT = 2;
+
+  var CAMERA = {
+    exterior: "slow push in toward the entrance, slight tilt up",
+    outdoor: "low glide forward, gentle rise at the end",
+    living: "steady push in through the room",
+    kitchen: "glide forward along the counters",
+    dining: "push in over the table",
+    bedroom: "slow push in toward the bed",
+    bathroom: "gentle push in",
+    product: "slow orbit, tight on the detail",
+    "default": "slow push in, subtle parallax"
+  };
+  var KINDS = [
+    ["exterior", ["exterior", "facade", "front", "entrance", "street"]],
+    ["outdoor", ["patio", "backyard", "garden", "terrace", "balcony", "pool", "outdoor", "yard", "deck", "roof"]],
+    ["living", ["living", "lounge", "sitting"]],
+    ["kitchen", ["kitchen"]],
+    ["dining", ["dining"]],
+    ["bedroom", ["bedroom", "suite"]],
+    ["bathroom", ["bath", "shower"]],
+    ["product", ["product", "close-up", "closeup", "detail"]]
+  ];
+
+  var shots = [
+    { name: "Exterior", caption: "" },
+    { name: "Patio", caption: "" },
+    { name: "Living room", caption: "" },
+    { name: "Full kitchen", caption: "" },
+    { name: "Dining area", caption: "" },
+    { name: "Bedroom", caption: "" },
+    { name: "Full bathroom", caption: "" },
+    { name: "Backyard", caption: "" }
+  ];
+
+  function $(id) { return document.getElementById(id); }
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function classify(name) {
+    var low = String(name || "").toLowerCase();
+    for (var i = 0; i < KINDS.length; i++) {
+      var kind = KINDS[i][0], words = KINDS[i][1];
+      for (var j = 0; j < words.length; j++) {
+        if (low.indexOf(words[j]) !== -1) return kind;
+      }
+    }
+    return "default";
+  }
+  function tc(sec) {
+    var r = Math.round(sec * 10) / 10;
+    var m = Math.floor(r / 60), s = r - m * 60;
+    return m + ":" + (s < 10 ? "0" : "") + s.toFixed(1);
+  }
+  function num(n) { return (Math.round(n * 100) / 100).toString(); }
+
+  function defaultCaption(shot, used) {
+    if (shot.caption && shot.caption.trim()) return shot.caption.trim();
+    var kind = classify(shot.name);
+    var presets = {
+      exterior: "It looks like this from the road",
+      outdoor: "…and there's outside space too",
+      living: "Living room",
+      kitchen: "Full kitchen — not a kitchenette",
+      dining: "Room to actually sit down and eat",
+      bedroom: "The bedroom",
+      bathroom: "The bathroom"
+    };
+    var cap = presets[kind] || shot.name;
+    // A subject with two outdoor areas shouldn't caption both identically —
+    // a repeat falls back to the shot's own name.
+    if (used.indexOf(cap) !== -1) cap = shot.name;
+    return cap;
+  }
+  function voFor(caption) {
+    var spoken = String(caption).replace(/ · /g, ". ").replace(/…/g, "")
+      .replace(/★/g, " stars").trim();
+    return spoken.replace(/\.+$/, "") + ".";
+  }
+
+  function plan() {
+    var total = parseFloat($("dur").value);
+    var hookText = $("hook").value.trim() || "Watch this";
+    var ctaText = $("cta").value.trim() || "Link in bio";
+    var live = shots.filter(function (s) { return s.name && s.name.trim(); });
+
+    if (!live.length) return { error: "Add at least one shot to build a manuscript." };
+
+    var middleBudget = total - HOOK_S - CTA_S;
+    if (middleBudget <= 0) {
+      return { error: "A " + num(total) + "s runtime leaves no room for content — the "
+        + "hook and closing card alone need " + (HOOK_S + CTA_S) + "s." };
+    }
+    var maxMiddle = Math.floor(middleBudget / MIN_BEAT);
+    if (maxMiddle < 1) {
+      return { error: "A " + num(total) + "s runtime is too short for any body beat." };
+    }
+
+    var hero = live[0], rest = live.slice(1);
+    var middle = rest.slice(0, maxMiddle);
+    var dropped = rest.length - middle.length;
+    var beatLen = middle.length ? middleBudget / middle.length : 0;
+
+    var used = [hookText], beats = [], t = 0;
+
+    function add(role, shot, dur, caption) {
+      var camera = role === "cta" ? "hold, very slow drift"
+        : (CAMERA[classify(shot.name)] || CAMERA["default"]);
+      beats.push({
+        n: beats.length + 1, role: role, start: t, end: t + dur, duration: dur,
+        shot: shot.name, camera: camera, caption: caption, vo: voFor(caption),
+        prompt: "Vertical 9:16 short-form shot: " + camera + ", " + shot.name.toLowerCase()
+          + ". Smooth continuous motion, no cuts. Scene completely static: no people, "
+          + "nothing rearranged, no warping of geometry."
+      });
+      t += dur;
+    }
+
+    add("hook", hero, HOOK_S, hookText);
+    middle.forEach(function (s) {
+      var cap = defaultCaption(s, used);
+      used.push(cap);
+      add("body", s, beatLen, cap);
+    });
+    add("cta", middle.length ? middle[middle.length - 1] : hero, CTA_S, ctaText);
+
+    return { beats: beats, total: total, dropped: dropped, beatLen: beatLen };
+  }
+
+  function renderTimeline(p) {
+    var tl = $("timeline"), ruler = $("ruler");
+    tl.innerHTML = ""; ruler.innerHTML = "";
+    if (p.error) return;
+
+    p.beats.forEach(function (b) {
+      var el = document.createElement("div");
+      el.className = "tl-beat " + b.role;
+      el.style.flex = b.duration + " 1 0";
+      el.title = b.shot + " · " + tc(b.start) + "–" + tc(b.end);
+      el.innerHTML = '<div class="tl-role">' + b.role + '</div>'
+        + '<div class="tl-name">' + esc(b.shot) + '</div>';
+      tl.appendChild(el);
+    });
+
+    var step = p.total > 40 ? 10 : (p.total > 20 ? 5 : 2);
+    for (var s = 0; s <= p.total; s += step) {
+      var tick = document.createElement("span");
+      tick.className = "tick";
+      tick.style.left = (s / p.total * 100) + "%";
+      tick.textContent = s + "s";
+      ruler.appendChild(tick);
+    }
+  }
+
+  function renderShots() {
+    var host = $("shots");
+    host.innerHTML = "";
+    shots.forEach(function (s, i) {
+      var row = document.createElement("div");
+      row.className = "shot";
+      row.innerHTML =
+        '<span class="ord">' + (i + 1) + '</span>'
+        + '<input type="text" class="name-in" value="' + esc(s.name) + '" aria-label="Shot ' + (i + 1) + ' name">'
+        + '<input type="text" class="cap-in" value="' + esc(s.caption) + '" placeholder="caption (optional)" aria-label="Shot ' + (i + 1) + ' caption">'
+        + '<span class="shot-actions">'
+        + '<button class="mini up" ' + (i === 0 ? "disabled" : "") + ' aria-label="Move up">↑</button>'
+        + '<button class="mini down" ' + (i === shots.length - 1 ? "disabled" : "") + ' aria-label="Move down">↓</button>'
+        + '<button class="mini del" aria-label="Remove shot">×</button>'
+        + '</span>';
+      row.querySelector(".name-in").addEventListener("input", function (e) {
+        shots[i].name = e.target.value; render(false);
+      });
+      row.querySelector(".cap-in").addEventListener("input", function (e) {
+        shots[i].caption = e.target.value; render(false);
+      });
+      row.querySelector(".up").addEventListener("click", function () {
+        var t = shots[i - 1]; shots[i - 1] = shots[i]; shots[i] = t; render(true);
+      });
+      row.querySelector(".down").addEventListener("click", function () {
+        var t = shots[i + 1]; shots[i + 1] = shots[i]; shots[i] = t; render(true);
+      });
+      row.querySelector(".del").addEventListener("click", function () {
+        shots.splice(i, 1); render(true);
+      });
+      host.appendChild(row);
+    });
+  }
+
+  function renderBeats(p) {
+    var host = $("beats");
+    host.innerHTML = "";
+    if (p.error) return;
+    p.beats.forEach(function (b) {
+      var el = document.createElement("article");
+      el.className = "beat " + b.role;
+      el.innerHTML =
+        '<div class="beat-head">'
+        + '<span class="beat-tc">' + tc(b.start) + '–' + tc(b.end) + '</span>'
+        + '<span class="beat-role">' + b.role + '</span>'
+        + '<span class="beat-shot">' + esc(b.shot) + ' · ' + num(b.duration) + 's</span>'
+        + '</div>'
+        + '<div class="caption">' + esc(b.caption) + '</div>'
+        + '<div class="meta"><b>Voiceover</b> ' + esc(b.vo) + '</div>'
+        + '<div class="meta"><b>Camera</b> ' + esc(b.camera) + '</div>'
+        + '<div class="prompt">' + esc(b.prompt) + '</div>';
+      host.appendChild(el);
+    });
+  }
+
+  function renderWarn(p) {
+    var slot = $("warnSlot");
+    slot.innerHTML = "";
+    var msg = "";
+    if (p.error) msg = p.error;
+    else if (p.dropped > 0) {
+      msg = p.dropped + " shot" + (p.dropped > 1 ? "s" : "") + " won't fit in "
+        + num(p.total) + "s and " + (p.dropped > 1 ? "are" : "is") + " left out. "
+        + "Beats hold a " + MIN_BEAT + "s floor — below that a viewer sees movement "
+        + "but not the room. Lengthen the runtime or cut a shot.";
+    } else if (!p.error && p.beatLen && p.beatLen > 6) {
+      msg = "Body beats are " + num(p.beatLen) + "s each — long for short-form. "
+        + "Consider adding shots or trimming the runtime.";
+    }
+    if (msg) {
+      var d = document.createElement("div");
+      d.className = "warn";
+      d.textContent = msg;
+      slot.appendChild(d);
+    }
+  }
+
+  function toMarkdown(p) {
+    var title = $("title").value.trim() || "Untitled";
+    var place = $("place").value.trim();
+    var out = ["# Short manuscript — " + title, ""];
+    if (place) out.push("**" + place + "**  ");
+    out.push("Format 9:16 vertical · Runtime " + num(p.total) + "s · " + p.beats.length + " beats", "");
+    out.push("| # | In | Out | Dur | Shot | On-screen text |");
+    out.push("|---|----|-----|-----|------|----------------|");
+    p.beats.forEach(function (b) {
+      out.push("| " + b.n + " | " + tc(b.start) + " | " + tc(b.end) + " | " + num(b.duration)
+        + "s | " + b.shot + " | " + b.caption + " |");
+    });
+    out.push("", "## Beats", "");
+    p.beats.forEach(function (b) {
+      out.push("### " + b.n + ". " + tc(b.start) + "–" + tc(b.end) + " · "
+        + b.role.toUpperCase() + " · " + b.shot, "");
+      out.push("- **On-screen text:** " + b.caption);
+      out.push("- **Voiceover:** " + b.vo);
+      out.push("- **Camera:** " + b.camera);
+      out.push("- **Generation prompt:** " + b.prompt, "");
+    });
+    return out.join("\n");
+  }
+
+  function toJson(p) {
+    return JSON.stringify({
+      title: $("title").value.trim(),
+      subject: $("place").value.trim(),
+      format: "9:16",
+      runtime_seconds: p.total,
+      beats: p.beats.map(function (b) {
+        return {
+          n: b.n, role: b.role,
+          start: Math.round(b.start * 100) / 100,
+          end: Math.round(b.end * 100) / 100,
+          duration: Math.round(b.duration * 100) / 100,
+          shot: b.shot, caption: b.caption, vo: b.vo,
+          camera: b.camera, prompt: b.prompt
+        };
+      })
+    }, null, 2);
+  }
+
+  var toastTimer;
+  function toast(msg) {
+    var t = $("toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.classList.remove("show"); }, 1700);
+  }
+  function copy(text, okMsg) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(
+        function () { toast(okMsg); },
+        function () { toast("Couldn't copy — select the text and copy manually."); }
+      );
+    } else {
+      toast("Couldn't copy — select the text and copy manually.");
+    }
+  }
+
+  var current = null;
+  function render(rebuildShots) {
+    if (rebuildShots) renderShots();
+    $("durVal").textContent = $("dur").value + "s";
+    var p = plan();
+    current = p;
+    renderWarn(p);
+    renderTimeline(p);
+    renderBeats(p);
+  }
+
+  ["title", "place", "hook", "cta"].forEach(function (id) {
+    $(id).addEventListener("input", function () { render(false); });
+  });
+  $("dur").addEventListener("input", function () { render(false); });
+  $("addShot").addEventListener("click", function () {
+    shots.push({ name: "New shot", caption: "" });
+    render(true);
+  });
+  $("copyMd").addEventListener("click", function () {
+    if (!current || current.error) { toast("Nothing to copy yet."); return; }
+    copy(toMarkdown(current), "Manuscript copied");
+  });
+  $("copyJson").addEventListener("click", function () {
+    if (!current || current.error) { toast("Nothing to copy yet."); return; }
+    copy(toJson(current), "JSON copied");
+  });
+
+  render(true);
+})();
+</script>
