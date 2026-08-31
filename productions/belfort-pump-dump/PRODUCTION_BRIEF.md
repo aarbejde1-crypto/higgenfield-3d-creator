@@ -7,8 +7,20 @@ Framing: purely explanatory/historical. No investment advice, no instructions to
 
 **BLOCKED at funding.** Higgsfield balance is 0.05 credits (plan: starter). The MCP free
 trial is expired (`trial_status: expired`, `eligible: false`) and auto-refill is not
-available for this workspace, so `use_unlim` is not a path here. No generation has been
-submitted and nothing has been charged.
+available for this workspace, so `use_unlim` is not a path here.
+
+Confirmed against the backend, not assumed: the Phase 1 style-key submission was rejected
+with `submission_failed — Out of credits on starter (monthly) plan in Private workspace`
+(0 of 1 submitted). Nothing has been charged. Intake is complete and every parameter is
+locked; the run resumes at Phase 1 the moment credits land.
+
+Style formula (Stickman Cartoon, from `references/prompts.md §0`, used byte-identical
+everywhere):
+
+> flat 2D webcomic cartoon, extremely minimal — uniform thin even-weight black outlines,
+> egg-shaped heads with tiny dot eyes and a single line mouth, plain noodle limbs, solid
+> flat color fills with NO shading, NO gradients, NO texture, deadpan minimalist design,
+> plain flat solid-color backgrounds.
 
 ## Locked intake (faceless-video workflow v2.4)
 
@@ -21,8 +33,8 @@ submitted and nothing has been charged.
 | Subtitles | Yes — burned, via the `subtitles` workflow | picked |
 | Thumbnail | No | picked |
 | Topic / script | User-supplied manuscript (below) | stated in brief |
-| Style preset | **OPEN** — gallery round pending | — |
-| Narrator voice | **OPEN** — voice round pending | — |
+| Style preset | Stickman Cartoon (`237dd06c…`), donor `f447d4d1…` | picked |
+| Narrator voice | Archie (`bd072316…`, preset) | picked |
 
 ## Locked models (never substitute)
 

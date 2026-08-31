@@ -6,8 +6,19 @@
   "aspect_ratio": "9:16",
   "subtitles": true,
   "thumbnail": false,
-  "style_preset": null,
-  "voice": null,
+  "style_preset": {
+    "name": "Stickman Cartoon",
+    "preset_id": "237dd06c-3729-4895-9672-1c623c4266e0",
+    "style_donor_media_id": "f447d4d1-8431-4b3a-af83-42b08ebf05cf",
+    "source": "picked by the user",
+    "formula": "flat 2D webcomic cartoon, extremely minimal — uniform thin even-weight black outlines, egg-shaped heads with tiny dot eyes and a single line mouth, plain noodle limbs, solid flat color fills with NO shading, NO gradients, NO texture, deadpan minimalist design, plain flat solid-color backgrounds."
+  },
+  "voice": {
+    "name": "Archie",
+    "voice_id": "bd072316-f77c-588b-b6e5-e46b9b03d008",
+    "voice_type": "preset",
+    "source": "picked by the user"
+  },
   "models": {
     "image": "seedream_v5_pro",
     "voice": "seed_audio",
@@ -26,7 +37,14 @@
     "progression": "flat -> steep climb -> peak & crack -> frozen red flatline",
     "resolution": "frozen red flatline paired with courthouse imagery"
   },
-  "arc": { "hook": 1, "build": [2], "turn": 3, "payoff": 4 },
+  "arc": {
+    "hook": 1,
+    "build": [
+      2
+    ],
+    "turn": 3,
+    "payoff": 4
+  },
   "narration_continuous": "Jordan Belfort didn't trade stocks — he pumped and dumped them. At Stratton Oakmont, he built a machine that turned cheap penny stocks into millions of dollars almost overnight. First, his 'rat holes' quietly bought shares before the public knew the stock existed. Then hundreds of brokers cold-called investors, pushing the price higher fast, block by block. Once the price peaked, Belfort quietly sold his shares while brokers pushed new buyers in. On the Steve Madden IPO alone, he pocketed twenty-three million dollars in under three minutes. That's the pump and dump: inflate the price, then dump it on investors left holding the loss. Stratton Oakmont collapsed, Belfort pleaded guilty to fraud, and served nearly two years in prison.",
   "blocks": [
     {
@@ -36,13 +54,44 @@
       "location": "trading_floor_stage",
       "through_line_state": "flat, about to climb",
       "framings": [
-        { "n": 1, "shot": "WIDE", "angle": "low", "scene": "trading-floor stage, neon STRATTON OAKMONT sign glowing", "cover_frame": true },
-        { "n": 2, "shot": "MEDIUM", "angle": "eye", "scene": "chart ticking upward on a screen behind a silhouetted broker" },
-        { "n": 3, "shot": "CLOSE-UP", "angle": "high", "scene": "hand on a phone receiver against the desk" },
-        { "n": 4, "shot": "CLOSE-UP", "angle": "low", "scene": "the Chart's line spiking sharply upward" },
-        { "n": 5, "shot": "MEDIUM", "angle": "eye", "scene": "the rising chart filling the frame" }
+        {
+          "n": 1,
+          "shot": "WIDE",
+          "angle": "low",
+          "scene": "trading-floor stage, neon STRATTON OAKMONT sign glowing",
+          "cover_frame": true
+        },
+        {
+          "n": 2,
+          "shot": "MEDIUM",
+          "angle": "eye",
+          "scene": "chart ticking upward on a screen behind a silhouetted broker"
+        },
+        {
+          "n": 3,
+          "shot": "CLOSE-UP",
+          "angle": "high",
+          "scene": "hand on a phone receiver against the desk"
+        },
+        {
+          "n": 4,
+          "shot": "CLOSE-UP",
+          "angle": "low",
+          "scene": "the Chart's line spiking sharply upward"
+        },
+        {
+          "n": 5,
+          "shot": "MEDIUM",
+          "angle": "eye",
+          "scene": "the rising chart filling the frame"
+        }
       ],
-      "assets_used": ["trading_floor_stage", "the_chart", "neon_sign", "phone_prop"]
+      "assets_used": [
+        "trading_floor_stage",
+        "the_chart",
+        "neon_sign",
+        "phone_prop"
+      ]
     },
     {
       "n": 2,
@@ -51,13 +100,43 @@
       "location": "boiler_room_desks",
       "through_line_state": "climbing faster",
       "framings": [
-        { "n": 6, "shot": "WIDE", "angle": "high", "scene": "rows of brokers at phone desks" },
-        { "n": 7, "shot": "CLOSE-UP", "angle": "eye", "scene": "a hand on a phone dial" },
-        { "n": 8, "shot": "MEDIUM", "angle": "low", "scene": "a stamp coming down on a stock-certificate prop" },
-        { "n": 9, "shot": "MEDIUM", "angle": "high", "scene": "the Chart climbing faster" },
-        { "n": 10, "shot": "WIDE", "angle": "eye", "scene": "the boiler room erupting, fists in the air" }
+        {
+          "n": 6,
+          "shot": "WIDE",
+          "angle": "high",
+          "scene": "rows of brokers at phone desks"
+        },
+        {
+          "n": 7,
+          "shot": "CLOSE-UP",
+          "angle": "eye",
+          "scene": "a hand on a phone dial"
+        },
+        {
+          "n": 8,
+          "shot": "MEDIUM",
+          "angle": "low",
+          "scene": "a stamp coming down on a stock-certificate prop"
+        },
+        {
+          "n": 9,
+          "shot": "MEDIUM",
+          "angle": "high",
+          "scene": "the Chart climbing faster"
+        },
+        {
+          "n": 10,
+          "shot": "WIDE",
+          "angle": "eye",
+          "scene": "the boiler room erupting, fists in the air"
+        }
       ],
-      "assets_used": ["boiler_room_desks", "the_chart", "phone_prop", "stock_certificate"]
+      "assets_used": [
+        "boiler_room_desks",
+        "the_chart",
+        "phone_prop",
+        "stock_certificate"
+      ]
     },
     {
       "n": 3,
@@ -66,13 +145,42 @@
       "location": "ipo_bell_stage",
       "through_line_state": "peaking, then cracking",
       "framings": [
-        { "n": 11, "shot": "WIDE", "angle": "low", "scene": "a hand at the IPO bell" },
-        { "n": 12, "shot": "CLOSE-UP", "angle": "eye", "scene": "the Chart at its peak" },
-        { "n": 13, "shot": "MEDIUM", "angle": "high", "scene": "a briefcase snapping shut over stacked cash" },
-        { "n": 14, "shot": "CLOSE-UP", "angle": "low", "scene": "the Chart cracking and plunging" },
-        { "n": 15, "shot": "WIDE", "angle": "eye", "scene": "confetti over the floor turning to red warning light" }
+        {
+          "n": 11,
+          "shot": "WIDE",
+          "angle": "low",
+          "scene": "a hand at the IPO bell"
+        },
+        {
+          "n": 12,
+          "shot": "CLOSE-UP",
+          "angle": "eye",
+          "scene": "the Chart at its peak"
+        },
+        {
+          "n": 13,
+          "shot": "MEDIUM",
+          "angle": "high",
+          "scene": "a briefcase snapping shut over stacked cash"
+        },
+        {
+          "n": 14,
+          "shot": "CLOSE-UP",
+          "angle": "low",
+          "scene": "the Chart cracking and plunging"
+        },
+        {
+          "n": 15,
+          "shot": "WIDE",
+          "angle": "eye",
+          "scene": "confetti over the floor turning to red warning light"
+        }
       ],
-      "assets_used": ["ipo_bell_stage", "the_chart", "briefcase_and_cash"]
+      "assets_used": [
+        "ipo_bell_stage",
+        "the_chart",
+        "briefcase_and_cash"
+      ]
     },
     {
       "n": 4,
@@ -81,19 +189,64 @@
       "location": "courthouse_steps",
       "through_line_state": "frozen, red flatline",
       "framings": [
-        { "n": 16, "shot": "WIDE", "angle": "low", "scene": "exterior of a federal courthouse" },
-        { "n": 17, "shot": "CLOSE-UP", "angle": "eye", "scene": "a gavel coming down" },
-        { "n": 18, "shot": "MEDIUM", "angle": "high", "scene": "handcuffs closing around wrists" },
-        { "n": 19, "shot": "CLOSE-UP", "angle": "low", "scene": "the Chart frozen flat and red" },
-        { "n": 20, "shot": "MEDIUM", "angle": "eye", "scene": "the frozen chart, final held frame" }
+        {
+          "n": 16,
+          "shot": "WIDE",
+          "angle": "low",
+          "scene": "exterior of a federal courthouse"
+        },
+        {
+          "n": 17,
+          "shot": "CLOSE-UP",
+          "angle": "eye",
+          "scene": "a gavel coming down"
+        },
+        {
+          "n": 18,
+          "shot": "MEDIUM",
+          "angle": "high",
+          "scene": "handcuffs closing around wrists"
+        },
+        {
+          "n": 19,
+          "shot": "CLOSE-UP",
+          "angle": "low",
+          "scene": "the Chart frozen flat and red"
+        },
+        {
+          "n": 20,
+          "shot": "MEDIUM",
+          "angle": "eye",
+          "scene": "the frozen chart, final held frame"
+        }
       ],
-      "assets_used": ["courthouse_steps", "the_chart", "gavel", "handcuffs"]
+      "assets_used": [
+        "courthouse_steps",
+        "the_chart",
+        "gavel",
+        "handcuffs"
+      ]
     }
   ],
   "asset_roster": {
-    "locations": ["trading_floor_stage", "boiler_room_desks", "ipo_bell_stage", "courthouse_steps"],
-    "props": ["the_chart", "neon_sign", "phone_prop", "stock_certificate", "briefcase_and_cash", "gavel", "handcuffs"],
-    "characters": ["silhouetted_broker_generic"],
+    "locations": [
+      "trading_floor_stage",
+      "boiler_room_desks",
+      "ipo_bell_stage",
+      "courthouse_steps"
+    ],
+    "props": [
+      "the_chart",
+      "neon_sign",
+      "phone_prop",
+      "stock_certificate",
+      "briefcase_and_cash",
+      "gavel",
+      "handcuffs"
+    ],
+    "characters": [
+      "silhouetted_broker_generic"
+    ],
     "likeness_policy": "No real-person likeness. Belfort is named in narration but never depicted."
   },
   "constraints": {
@@ -110,8 +263,25 @@
   "seo": {
     "title": "How Jordan Belfort's Pump-and-Dump Scheme Actually Worked",
     "description": "The real Wolf of Wall Street scam, explained in 40 seconds. Jordan Belfort didn't get rich trading — he built a pump-and-dump machine at Stratton Oakmont, inflating penny stocks and cashing out before investors caught on. Here's how it worked, and how it all fell apart.",
-    "hashtags": ["#Shorts", "#WolfOfWallStreet", "#StockMarket", "#FinanceExplained"],
-    "tags": ["Jordan Belfort", "Wolf of Wall Street", "pump and dump scheme", "Stratton Oakmont", "stock market fraud", "securities fraud", "finance explainer", "true crime finance", "penny stocks", "Steve Madden IPO", "boiler room stocks"],
+    "hashtags": [
+      "#Shorts",
+      "#WolfOfWallStreet",
+      "#StockMarket",
+      "#FinanceExplained"
+    ],
+    "tags": [
+      "Jordan Belfort",
+      "Wolf of Wall Street",
+      "pump and dump scheme",
+      "Stratton Oakmont",
+      "stock market fraud",
+      "securities fraud",
+      "finance explainer",
+      "true crime finance",
+      "penny stocks",
+      "Steve Madden IPO",
+      "boiler room stocks"
+    ],
     "cta_line": "More true-crime finance breakdowns like this — follow along.",
     "cover_frame_note": "Framing 1 — trading floor with the glowing STRATTON OAKMONT sign"
   }
