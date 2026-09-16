@@ -25,11 +25,12 @@
     "assembler": "assemble_slides.sh"
   },
   "frame_budget": {
-    "narration_seconds_estimate": 40,
-    "assembler_floor": 27,
-    "target_frames": 40,
-    "kind_a_new_framings": 20,
-    "kind_b_edits": 20
+    "narration_seconds": 53.874,
+    "assembler_floor": 36,
+    "frames_built": 55,
+    "kind_a_new_framings": 24,
+    "kind_b_edits": 31,
+    "max_frame_hold_seconds": 1.17
   },
   "through_line": {
     "name": "The Chart",
@@ -284,5 +285,32 @@
     ],
     "cta_line": "More true-crime finance breakdowns like this — follow along.",
     "cover_frame_note": "Framing 1 — trading floor with the glowing STRATTON OAKMONT sign"
+  },
+  "status": "DELIVERED",
+  "narration_measured_seconds": 53.874,
+  "final_duration_seconds": 54.034,
+  "duration_decision": "Script measured 53.9s at natural pace against a 40s target. User chose to keep the full 118-word manuscript and ship ~54s rather than cut ~30 words.",
+  "outputs": {
+    "clean_master": "https://d2ol7oe51mr4n9.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/635af47a-d8a0-42b8-b08b-cb93fa39242e.mp4",
+    "final_captioned": "https://d2ol7oe51mr4n9.cloudfront.net/user_3GlldkfCL5pInKESdp9ZIIJqL2q/781872d1-e562-4cf1-91c7-013e2690ae51.mp4",
+    "resolution": "768x1360 (9:16)",
+    "fps": 30
+  },
+  "qc": {
+    "alignment_similarity": 0.975,
+    "caption_similarity": 0.92,
+    "caption_words": 118,
+    "transcript_words": 118,
+    "cues": 32,
+    "caption_style": "bold / tiktok, black outline",
+    "duration_match": "clean 54.034s == captioned 54.034s",
+    "audio_tail": "53.894s, within 0.2s of video",
+    "caption_pixels_verified_at": [
+      "3.0s",
+      "12.0s",
+      "26.0s",
+      "40.0s",
+      "52.9s"
+    ]
   }
 }

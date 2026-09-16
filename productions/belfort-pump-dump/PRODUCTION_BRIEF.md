@@ -5,7 +5,7 @@ Framing: purely explanatory/historical. No investment advice, no instructions to
 
 ## Status
 
-**BLOCKED at funding.** Higgsfield balance is 0.05 credits (plan: starter). The MCP free
+**DELIVERED.** The finished captioned Short is built and hosted. See `script_manifest.json` → `outputs`.
 trial is expired (`trial_status: expired`, `eligible: false`) and auto-refill is not
 available for this workspace, so `use_unlim` is not a path here.
 
