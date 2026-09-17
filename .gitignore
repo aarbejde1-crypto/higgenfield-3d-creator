@@ -1,0 +1,4 @@
+# Generated media lives in Higgsfield storage, not in git
+runs/**/video/*.mp4
+runs/**/assets/*.png
+runs/**/*.jpg

@@ -4,10 +4,15 @@
   "tone": "plain-language explainer, Wall Street register, no hype",
   "language": "en",
   "style_preset": "Editorial Motion Graphics",
-  "voice_id": null,
+  "voice_id": "d8ba9f14-8a24-44db-932b-99e16c45bd32",
   "aspect": "9:16",
   "duration_seconds": 40,
   "caption_preset": "Impact Bold",
-  "compliance": "explanatory only — never buy/sell/hold, no price targets, no income claims",
-  "published_topics": []
+  "compliance": "explanatory only \u2014 never buy/sell/hold, no price targets, no income claims",
+  "published_topics": [
+    "How a room full of phones turned a worthless stock into a fortune"
+  ],
+  "voice_type": "preset",
+  "accent_color": "deep crimson",
+  "style_preset_id": "56fc6472-33b7-45dc-83ff-80c71d40aec6"
 }

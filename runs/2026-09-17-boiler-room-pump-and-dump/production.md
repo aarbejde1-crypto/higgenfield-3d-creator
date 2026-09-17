@@ -52,3 +52,23 @@ same 20 words.
 
 Style key + 6 assets: 1.5 each. Video blocks: 20 each. Measured, not estimated — block 1
 was submitted alone first specifically to price the model before committing the rest.
+
+## Delivery
+
+| | |
+|---|---|
+| Captioned final (deliverable) | `5773c94e-5c65-4054-8c23-e3e3f4e29503.mp4` |
+| Clean master (immutable) | `5a0c77a5-d991-48ed-92cf-9888cf6647d9.mp4` |
+| Runtime | 40.096s, 1440×2560, 24fps |
+| Captions | 20 cues, TikTok Sans bold, **similarity 1.0** (86/86 words match the authored script) |
+
+Assembly receipts: every block matched to ~−21.7 dB voice, speech centred at
+0.93 / 10.97 / 20.66 / 30.78s, narration present in all four windows, no internal
+pauses, no time-stretching. Per-block mix after assembly: −19.2 / −19.5 / −19.3 /
+−19.0 dB — a 0.5 dB spread against a 3 dB tolerance.
+
+One snag worth recording: the assembler's sidecar names its voice files
+`v_000.wav…v_003.wav` internally, while the pairs manifest supplied
+`voice01.wav…voice04.wav`. The caption timer reads the sidecar, so it looked for names
+that were not on disk. Fixed by providing the sidecar's names alongside the originals —
+the sidecar itself is the assembler's receipt and must never be hand-edited.
