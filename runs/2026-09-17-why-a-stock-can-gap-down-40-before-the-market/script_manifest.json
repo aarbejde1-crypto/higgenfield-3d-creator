@@ -1,0 +1,86 @@
+{
+  "topic": "Why a stock can gap down 40% before the market even opens",
+  "channel_type": "explainer",
+  "style": "",
+  "through_line": {
+    "name": "The price column",
+    "asset": "a solid stacked column on a near-black plane whose height is the price",
+    "progression": "tall and still -> held back by a shutter as mass builds -> snaps, middle vanishes into a void -> re-forms short",
+    "resolution": "a short column under a tall empty void, both marker lines held, settled"
+  },
+  "arc": { "hook": 1, "build": [2], "turn": 3, "payoff": 4 },
+  "blocks": [
+    {
+      "n": 1,
+      "arc_role": "hook",
+      "vo_line": "Your stock closed at fifty dollars. It opens at thirty, and nobody traded a single share in between — that's a gap down, and the chart simply skips the space.",
+      "location": "abstract_floor",
+      "through_line_state": "tall, still, one marker line snapped onto its top edge",
+      "shots": [
+        "SHOT 1 0.0-2.0s WIDE low angle: the price column stands tall on an empty near-black plane; a hard marker line sweeps in from the left and snaps onto its top edge (impact beat, cover frame)",
+        "SHOT 2 2.0-4.0s ECU high angle: the marker line resting on the column's top edge, slow push-in",
+        "SHOT 3 4.0-6.0s MEDIUM eye level: a second marker line drops in far below the first and holds in empty space, gentle drift",
+        "SHOT 4 6.0-8.0s WIDE low angle: both lines in frame, the gulf between them dark and empty, whip pan across the void",
+        "SHOT 5 8.0-10.0s CU low angle: the column's base with the lower line slicing through it, static"
+      ],
+      "assets_used": ["price_column", "marker_line"]
+    },
+    {
+      "n": 2,
+      "arc_role": "build",
+      "vo_line": "Markets close at four. The company's bad news lands at six, and every holder who wants out can only queue an order — no buyer meets them until morning.",
+      "location": "abstract_floor",
+      "through_line_state": "hidden behind a shutter, untouched, while mass piles against it",
+      "shots": [
+        "SHOT 1 10.0-12.0s CU eye level: a shutter slams down in front of the column (impact beat)",
+        "SHOT 2 12.0-14.0s WIDE high angle: behind the shutter small angular shapes accumulate, first a few, then a cluster, then a wall, slow push-in",
+        "SHOT 3 14.0-16.0s ECU low angle: individual shapes pressing into the shutter, deforming it, static",
+        "SHOT 4 16.0-18.0s MEDIUM eye level: the shutter bowing inward while the column behind stays untouched, gentle drift",
+        "SHOT 5 18.0-20.0s WIDE low angle: the full mass stacked against an unmoving shutter, one pulse of light running its length"
+      ],
+      "assets_used": ["price_column", "shutter", "order_shapes"]
+    },
+    {
+      "n": 3,
+      "arc_role": "turn",
+      "vo_line": "Here's the twist: the open isn't a trade. It's an auction that matches every queued order at one single price, and thirty is simply where buyers and sellers finally meet.",
+      "location": "abstract_floor",
+      "through_line_state": "snaps at the clearing line, upper section detaches and vanishes",
+      "shots": [
+        "SHOT 1 20.0-22.0s MEDIUM low angle: the shutter vanishes in one frame and the mass surges forward (impact beat)",
+        "SHOT 2 22.0-24.0s ECU high angle: shapes funnel toward one narrow seam from both sides, a few first, then a stream",
+        "SHOT 3 24.0-26.0s WIDE eye level: the seam ignites into a single bright horizontal line across frame, slow push-in",
+        "SHOT 4 26.0-28.0s CU low angle: the column snaps at that line, its upper section detaching and gone (impact beat)",
+        "SHOT 5 28.0-30.0s MEDIUM high angle: the void where the column's middle was, nothing crossing it, gentle drift (CTA lands here)"
+      ],
+      "assets_used": ["price_column", "order_shapes", "clearing_line"]
+    },
+    {
+      "n": 4,
+      "arc_role": "payoff",
+      "vo_line": "So the drop didn't start at the open — it built overnight, in orders nobody could fill. Remember: the chart skips the space, because the selling was already done.",
+      "location": "abstract_floor",
+      "through_line_state": "re-formed short beneath a tall empty void, settled",
+      "shots": [
+        "SHOT 1 30.0-32.0s CU eye level: a shortened column re-forming bottom-up, blocks stacking in fast, static",
+        "SHOT 2 32.0-34.0s WIDE low angle: the short column beneath the empty void, whip up into the void",
+        "SHOT 3 34.0-36.0s ECU high angle: the void's clean upper edge, nothing there, slow push-in",
+        "SHOT 4 36.0-38.0s MEDIUM eye level: both marker lines, the gap between them stamped shut with one hard mark (impact beat)",
+        "SHOT 5 38.0-40.0s WIDE eye level: tall void, short column, both markers, easing into a settled stable hold"
+      ],
+      "assets_used": ["price_column", "marker_line", "void"]
+    }
+  ],
+  "sources": [
+    "https://www.nasdaqtrader.com/content/productsservices/trading/crosses/fact_sheet.pdf",
+    "https://www.nasdaq.com/glossary/g/gap-opening"
+  ],
+  "seo": {
+    "title": "Gap Down Explained: How a Stock Drops 40% With Zero Trades",
+    "description": "Your stock closed at fifty and opened at thirty — and nobody traded a single share in between. Here's what actually happens overnight: the market closes, bad news lands, and sell orders queue with no buyer to meet them. At the open, an auction matches every queued order at one clearing price. That single print is the gap down — the drop already happened, the chart just skips the space. #Shorts #Stocks #StockMarket #Investing",
+    "hashtags": ["#Shorts", "#Stocks", "#StockMarket", "#Investing"],
+    "tags": ["gap down", "premarket", "opening auction", "opening cross", "stock market basics", "why did my stock drop", "investing for beginners", "stock gap explained", "after hours news", "market mechanics", "retail investing", "nasdaq opening cross"],
+    "cta_line": "Follow for more market mechanics explained like this.",
+    "cover_frame_note": "Block 1 shot 1 is the thumbnail: one tall solid column on a near-black plane, a hard marker line snapping onto its top edge. Extreme contrast, one shape, no text. Burned caption carries the hook from true 0.0s."
+  }
+}

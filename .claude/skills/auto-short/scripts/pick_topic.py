@@ -7,8 +7,8 @@ Input is a JSON file: either a bare list of candidates, or an object with a
 Each candidate:
 
     {
-      "angle": "Why your nightly rate drops after one cancellation",
-      "keyword": "airbnb search ranking",
+      "angle": "Why a stock can gap down 40% before the market opens",
+      "keyword": "premarket gap down",
       "scores": {
         "demand": 4, "gap": 5, "hook_3s": 5, "payoff": 4,
         "rpm_band": 4, "evergreen": 4, "fit": 5, "risk": 5

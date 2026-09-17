@@ -17,9 +17,9 @@ value is that they say "make one" and get a video back. So:
 **Decide, state, proceed.** Every creative and technical parameter — topic,
 angle, duration, style preset, voice, aspect, caption style — is yours to
 choose. Announce each decision as a one-line statement with its reason, never
-as a question. "Topic: how Airbnb pricing algorithms actually set your nightly
-rate — highest demand-to-competition gap of the eight I scored." That is the
-whole interaction.
+as a question. "Topic: why a stock can gap down 40% before the market opens —
+highest demand-to-competition gap of the eight I scored." That is the whole
+interaction.
 
 Three things break the contract and are worth stopping for:
 
@@ -43,7 +43,7 @@ Everything for one video lives in one dated directory so a run is auditable
 and a later run can see what's already been published:
 
 ```
-runs/2026-09-17-airbnb-pricing-algorithm/
+runs/2026-09-17-premarket-gap-down/
 ├── topic-selection.json   # the candidates, their scores, why this one won
 ├── manuscript.md          # manu-writer output (A) + (B)
 ├── script_manifest.json   # manu-writer output (C) — the pipeline handoff
@@ -65,16 +65,16 @@ write it.
 
 ```json
 {
-  "niche": "short-term rental / Airbnb hosting",
-  "audience": "hosts with 1-5 listings who self-manage",
-  "tone": "plain-language explainer, no hype",
+  "niche": "finance / investing education, faceless",
+  "audience": "retail investors who know the words but not the mechanisms",
+  "tone": "plain-language explainer, Wall Street register, no hype",
   "language": "en",
   "style_preset": "Editorial Motion Graphics",
   "voice_id": null,
   "aspect": "9:16",
   "duration_seconds": 40,
   "caption_preset": "Impact Bold",
-  "compliance": "explanatory only — no income guarantees, no legal advice",
+  "compliance": "explanatory only — never buy/sell/hold, no price targets",
   "published_topics": []
 }
 ```
@@ -96,8 +96,8 @@ Read `references/seo-topic-selection.md` and follow it. In outline:
 1. Run 3–5 web searches for the channel's niche — what's trending now, what
    people are searching, what the competing channels have *not* covered well.
 2. Write down 6–10 candidate topics, each as a specific angle rather than a
-   subject. "Airbnb pricing" is a subject; "why your listing drops 40% in
-   search after one cancellation" is a topic.
+   subject. "Short selling" is a subject; "why a short squeeze forces buyers
+   to buy at any price" is a topic.
 3. Score each candidate on the eight signals in the reference, then run
    `scripts/pick_topic.py` to rank them. Use the script rather than eyeballing
    the winner — writing the per-signal numbers down is what forces an honest

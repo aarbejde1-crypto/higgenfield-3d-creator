@@ -34,16 +34,17 @@ Run 3–5 searches. Vary the shape — each one answers a different question:
 | Search shape | What it tells you |
 |---|---|
 | `<niche> trends <current month/year>` | what has momentum right now |
-| `<niche> questions people ask` / `<niche> reddit common questions` | real demand phrased the way viewers phrase it |
+| `<niche> questions beginners ask` | real demand phrased the way viewers phrase it |
 | `<niche> youtube shorts` | who's already covering it and how well |
 | `<niche> mistakes` / `<niche> myths` | counterintuitive angles, which hook best |
 | `<niche> <specific mechanism> explained` | whether a clear explanation already exists |
 
 Two things to actually extract, rather than skimming:
 
-- **The phrasing viewers use.** "Why is my listing not showing up" is a search
-  query; "Airbnb search ranking factors" is how a marketer writes. Target the
-  first — it's what gets typed, and it's what the hook should say out loud.
+- **The phrasing viewers use.** "Why did my stock drop for no reason" is a
+  search query; "equity volatility drivers" is how an analyst writes. Target
+  the first — it's what gets typed, and it's what the hook should say out
+  loud.
 - **Where the existing coverage is thin or wrong.** A topic with high demand
   and three bad videos is worth more than one with high demand and thirty good
   ones. This is the `gap` signal and it's the hardest to fake.
@@ -59,9 +60,9 @@ adjust.
 
 | Subject (too vague) | Angle (usable) |
 |---|---|
-| Airbnb pricing | Why your nightly rate drops the week after a cancellation |
-| Short squeeze | How a stock rockets 300% with zero news behind it |
-| AI tools | The one prompt pattern that stops ChatGPT inventing sources |
+| Short selling | How a stock rockets 300% with zero news behind it |
+| Market makers | Who is on the other side of your trade, and why they want it |
+| Inflation | Why your raise made you poorer this year |
 
 The test: can you state it as a bold claim or a curiosity gap in eight words or
 fewer? If not, it's still a subject. Narrow it until you can — that sentence
