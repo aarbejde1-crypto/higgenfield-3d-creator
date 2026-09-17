@@ -1,19 +1,26 @@
 {
   "topic": "How a room full of phones turned a worthless stock into a fortune",
   "channel_type": "explainer",
-  "style": "",
+  "style": "Editorial Motion Graphics, accent deep crimson",
   "through_line": {
-    "name": "The token stack",
-    "asset": "a stack of flat identical tokens on a vast near-black plane, plus a hard reserve block",
-    "progression": "short and dull, reserve block snapped out of its base -> filaments fan out and the stack climbs into a bright tower -> the reserve block slides out and the tower stands on nothing -> it collapses",
-    "resolution": "a dull scattered spread on one side, the reserve block far off on the other, large and untouched"
+    "name": "The card stack",
+    "asset": "a stack of monochrome halftone paper cards on a warm cream collage stage, plus a solid deep crimson token slab as the single color-pop",
+    "progression": "stack slams down, the giant hand slides the crimson slab out of its base -> crimson strokes fan out and the stack climbs into a tower -> the hand snatches the slab away and the tower stands on an empty notch -> it collapses",
+    "resolution": "a dull scattered spread of cards on one side of the cream stage, the crimson slab far off on the other, large and untouched"
   },
-  "arc": { "hook": 1, "build": [2], "turn": 3, "payoff": 4 },
+  "arc": {
+    "hook": 1,
+    "build": [
+      2
+    ],
+    "turn": 3,
+    "payoff": 4
+  },
   "blocks": [
     {
       "n": 1,
       "arc_role": "hook",
-      "vo_line": "A stock worth nothing made someone a fortune. They call it a pump and dump — an illegal scheme that begins in silence, with insiders buying a cheap stock nobody watches.",
+      "vo_line": "A stock worth nothing made someone a fortune. It's called a pump and dump, and the scheme is illegal from the first day.",
       "location": "abstract_plane",
       "through_line_state": "short and dull, a reserve block snapped out of its base and set aside",
       "shots": [
@@ -23,12 +30,15 @@
         "SHOT 4 6.0-8.0s CU low angle: the notch left at the stack's base where the block came out, static",
         "SHOT 5 8.0-10.0s WIDE high angle: the whole plane, small stack and reserve block off to one side, nothing else, slow push-in"
       ],
-      "assets_used": ["token_stack", "reserve_block"]
+      "assets_used": [
+        "token_stack",
+        "reserve_block"
+      ]
     },
     {
       "n": 2,
       "arc_role": "build",
-      "vo_line": "Then the phones start. Rows of salespeople work scripted call lists, hyping the stock to strangers, and every fresh buyer pushes the price higher than the last one paid.",
+      "vo_line": "Then the phones start. Salespeople work scripted call lists, and every fresh buyer pushes the price higher than the last.",
       "location": "abstract_plane",
       "through_line_state": "climbing fast into a tall bright tower as tokens arrive along filaments",
       "shots": [
@@ -38,12 +48,15 @@
         "SHOT 4 16.0-18.0s MEDIUM eye level: the stack climbing fast, brightening as it rises, gentle drift",
         "SHOT 5 18.0-20.0s WIDE low angle: the stack now a tall bright tower against the dark, whip up its full length"
       ],
-      "assets_used": ["token_stack", "filaments"]
+      "assets_used": [
+        "token_stack",
+        "filaments"
+      ]
     },
     {
       "n": 3,
       "arc_role": "turn",
-      "vo_line": "Here's why it only works on penny stocks: barely any reporting, and so few shareholders that one coordinated push moves everything. At the top, the insiders sell their entire position.",
+      "vo_line": "It only works on penny stocks: barely any reporting, few shareholders, one push moves everything. At the top, insiders sell.",
       "location": "abstract_plane",
       "through_line_state": "at peak height and hollow, then the reserve block slides out from under it",
       "shots": [
@@ -53,12 +66,16 @@
         "SHOT 4 26.0-28.0s CU low angle: at the base, the reserve block slides out in one hard move and exits frame (impact beat)",
         "SHOT 5 28.0-30.0s MEDIUM eye level: the tower standing on nothing, the first tremor running upward, static (CTA lands here)"
       ],
-      "assets_used": ["token_stack", "reserve_block", "filaments"]
+      "assets_used": [
+        "token_stack",
+        "reserve_block",
+        "filaments"
+      ]
     },
     {
       "n": 4,
       "arc_role": "payoff",
-      "vo_line": "The hype stops the same day, and the price falls back to nothing — this time held by the people who bought last. A stock worth nothing, and someone else's fortune.",
+      "vo_line": "The hype stops, the price falls, and the last buyers hold it. A stock worth nothing, and someone else's fortune.",
       "location": "abstract_plane",
       "through_line_state": "collapsed into a dull scattered spread, the reserve block far off and bright",
       "shots": [
@@ -68,7 +85,10 @@
         "SHOT 4 36.0-38.0s CU low angle: the dull tokens at rest where the tower stood, gentle drift",
         "SHOT 5 38.0-40.0s WIDE high angle: the dull spread on one side, the reserve block far off on the other, large bright and untouched, easing into a settled hold"
       ],
-      "assets_used": ["token_stack", "reserve_block"]
+      "assets_used": [
+        "token_stack",
+        "reserve_block"
+      ]
     }
   ],
   "sources": [
@@ -77,9 +97,27 @@
   ],
   "seo": {
     "title": "Pump and Dump Explained: How a Worthless Stock Made Millions",
-    "description": "A stock worth nothing made someone a fortune — here's the illegal scheme behind it. Insiders quietly buy up a cheap penny stock, then rooms of salespeople work scripted call lists to hype it to strangers. It only works on penny stocks: barely any reporting, and so few shareholders that one coordinated push moves the price. At the top the insiders sell everything, the hype stops, and the price falls back to nothing. #Shorts #Stocks #WallStreet #Investing",
-    "hashtags": ["#Shorts", "#Stocks", "#WallStreet", "#Investing"],
-    "tags": ["pump and dump", "boiler room", "penny stocks", "securities fraud", "stock manipulation", "how pump and dump works", "wolf of wall street", "stock market explained", "investing for beginners", "market manipulation", "otc stocks", "financial crime"],
+    "description": "A stock worth nothing made someone a fortune \u2014 here's the illegal scheme behind it. Insiders quietly buy up a cheap penny stock, then rooms of salespeople work scripted call lists to hype it to strangers. It only works on penny stocks: barely any reporting, and so few shareholders that one coordinated push moves the price. At the top the insiders sell everything, the hype stops, and the price falls back to nothing. #Shorts #Stocks #WallStreet #Investing",
+    "hashtags": [
+      "#Shorts",
+      "#Stocks",
+      "#WallStreet",
+      "#Investing"
+    ],
+    "tags": [
+      "pump and dump",
+      "boiler room",
+      "penny stocks",
+      "securities fraud",
+      "stock manipulation",
+      "how pump and dump works",
+      "wolf of wall street",
+      "stock market explained",
+      "investing for beginners",
+      "market manipulation",
+      "otc stocks",
+      "financial crime"
+    ],
     "cta_line": "Follow for more market mechanics explained like this.",
     "cover_frame_note": "Block 1 shot 1 is the thumbnail: a small dull stack of tokens alone on a vast near-black plane, one hard reserve block snapping out of its base and sliding aside. Two shapes, extreme contrast, no text. Burned caption carries the hook from true 0.0s."
   }
