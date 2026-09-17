@@ -1,0 +1,184 @@
+{
+  "generated": "2026-09-17",
+  "niche": "finance / investing education, faceless",
+  "weights": {
+    "hook_3s": 2.5,
+    "gap": 2.0,
+    "demand": 1.5,
+    "fit": 1.5,
+    "payoff": 1.5,
+    "rpm_band": 1.0,
+    "evergreen": 1.0,
+    "risk": -2.0
+  },
+  "ranking": [
+    {
+      "angle": "Why a stock can gap down 40% before the market even opens",
+      "keyword": "premarket gap down",
+      "scores": {
+        "demand": 4,
+        "gap": 4,
+        "hook_3s": 5,
+        "payoff": 4,
+        "rpm_band": 5,
+        "evergreen": 5,
+        "fit": 4,
+        "risk": 5
+      },
+      "notes": {
+        "gap": "asked constantly by beginners, answered mostly in jargon"
+      },
+      "total": 88.2,
+      "deciding_signal": "gap"
+    },
+    {
+      "angle": "How a room full of phones turned a worthless stock into a fortune",
+      "keyword": "pump and dump",
+      "scores": {
+        "demand": 5,
+        "gap": 3,
+        "hook_3s": 5,
+        "payoff": 4,
+        "rpm_band": 5,
+        "evergreen": 5,
+        "fit": 5,
+        "risk": 4
+      },
+      "notes": {
+        "gap": "heavily covered as movie narrative, rarely as the actual mechanism",
+        "fit": "the channel's Wolf-of-Wall-Street register is exactly this"
+      },
+      "total": 86.4
+    },
+    {
+      "angle": "Who is actually on the other side of your trade",
+      "keyword": "market maker",
+      "scores": {
+        "demand": 4,
+        "gap": 4,
+        "hook_3s": 4,
+        "payoff": 4,
+        "rpm_band": 5,
+        "evergreen": 5,
+        "fit": 4,
+        "risk": 5
+      },
+      "notes": {
+        "gap": "most coverage is conspiracy-flavoured, not mechanism-first"
+      },
+      "total": 83.6
+    },
+    {
+      "angle": "Why a short squeeze forces buyers to buy at any price",
+      "keyword": "short squeeze",
+      "scores": {
+        "demand": 5,
+        "gap": 2,
+        "hook_3s": 5,
+        "payoff": 4,
+        "rpm_band": 5,
+        "evergreen": 4,
+        "fit": 5,
+        "risk": 4
+      },
+      "notes": {
+        "gap": "saturated since 2021 \u2014 hundreds of good videos"
+      },
+      "total": 80.9
+    },
+    {
+      "angle": "Why your order does not fill at the price you saw",
+      "keyword": "liquidity slippage",
+      "scores": {
+        "demand": 3,
+        "gap": 4,
+        "hook_3s": 3,
+        "payoff": 4,
+        "rpm_band": 5,
+        "evergreen": 5,
+        "fit": 4,
+        "risk": 5
+      },
+      "total": 76.4
+    },
+    {
+      "angle": "Why penny stocks are the only place this scheme works",
+      "keyword": "penny stock manipulation",
+      "scores": {
+        "demand": 3,
+        "gap": 4,
+        "hook_3s": 3,
+        "payoff": 4,
+        "rpm_band": 5,
+        "evergreen": 5,
+        "fit": 5,
+        "risk": 4
+      },
+      "total": 75.5
+    },
+    {
+      "angle": "How a bet turns into a price on a prediction market",
+      "keyword": "prediction markets",
+      "scores": {
+        "demand": 4,
+        "gap": 5,
+        "hook_3s": 4,
+        "payoff": 3,
+        "rpm_band": 5,
+        "evergreen": 3,
+        "fit": 3,
+        "risk": 4
+      },
+      "notes": {
+        "gap": "live 2026 trend, coverage still thin",
+        "evergreen": "trend-dependent"
+      },
+      "total": 74.5
+    },
+    {
+      "angle": "Why your raise made you poorer this year",
+      "keyword": "real wages inflation",
+      "scores": {
+        "demand": 5,
+        "gap": 2,
+        "hook_3s": 4,
+        "payoff": 4,
+        "rpm_band": 4,
+        "evergreen": 4,
+        "fit": 3,
+        "risk": 5
+      },
+      "notes": {
+        "gap": "every finance channel ran this in 2022-2024"
+      },
+      "total": 72.7
+    }
+  ],
+  "selected": {
+    "angle": "How a room full of phones turned a worthless stock into a fortune",
+    "keyword": "pump and dump",
+    "scores": {
+      "demand": 5,
+      "gap": 3,
+      "hook_3s": 5,
+      "payoff": 4,
+      "rpm_band": 5,
+      "evergreen": 5,
+      "fit": 5,
+      "risk": 4
+    },
+    "notes": {
+      "gap": "heavily covered as movie narrative, rarely as the actual mechanism",
+      "fit": "the channel's Wolf-of-Wall-Street register is exactly this"
+    },
+    "total": 86.4
+  },
+  "override": {
+    "ranked": 2,
+    "score": 86.4,
+    "beaten_by": "Why a stock can gap down 40% before the market even opens (88.2)",
+    "margin": 1.8,
+    "reason": "User selected. The rubric scored gap=3 on saturation, but the saturated coverage is the Wolf of Wall Street narrative, not the mechanism \u2014 almost nothing explains why the scheme only works on penny stocks. gap was arguably a 4, which would have won outright.",
+    "lesson": "Score gap against mechanism coverage, not topic familiarity. A famous story is not the same as a well-explained one."
+  }
+}

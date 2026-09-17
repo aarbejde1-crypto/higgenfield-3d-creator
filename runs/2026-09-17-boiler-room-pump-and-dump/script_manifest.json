@@ -1,0 +1,86 @@
+{
+  "topic": "How a room full of phones turned a worthless stock into a fortune",
+  "channel_type": "explainer",
+  "style": "",
+  "through_line": {
+    "name": "The token stack",
+    "asset": "a stack of flat identical tokens on a vast near-black plane, plus a hard reserve block",
+    "progression": "short and dull, reserve block snapped out of its base -> filaments fan out and the stack climbs into a bright tower -> the reserve block slides out and the tower stands on nothing -> it collapses",
+    "resolution": "a dull scattered spread on one side, the reserve block far off on the other, large and untouched"
+  },
+  "arc": { "hook": 1, "build": [2], "turn": 3, "payoff": 4 },
+  "blocks": [
+    {
+      "n": 1,
+      "arc_role": "hook",
+      "vo_line": "A stock worth nothing made someone a fortune. They call it a pump and dump — an illegal scheme that begins in silence, with insiders buying a cheap stock nobody watches.",
+      "location": "abstract_plane",
+      "through_line_state": "short and dull, a reserve block snapped out of its base and set aside",
+      "shots": [
+        "SHOT 1 0.0-2.0s WIDE low angle: a short dull stack of flat tokens alone on a vast near-black plane; a hard reserve block snaps out of its base and slides aside (impact beat, cover frame)",
+        "SHOT 2 2.0-4.0s ECU high angle: the top face of a single token, dull and scratched, slow push-in",
+        "SHOT 3 4.0-6.0s MEDIUM eye level: the reserve block settling apart from the stack, gentle drift",
+        "SHOT 4 6.0-8.0s CU low angle: the notch left at the stack's base where the block came out, static",
+        "SHOT 5 8.0-10.0s WIDE high angle: the whole plane, small stack and reserve block off to one side, nothing else, slow push-in"
+      ],
+      "assets_used": ["token_stack", "reserve_block"]
+    },
+    {
+      "n": 2,
+      "arc_role": "build",
+      "vo_line": "Then the phones start. Rows of salespeople work scripted call lists, hyping the stock to strangers, and every fresh buyer pushes the price higher than the last one paid.",
+      "location": "abstract_plane",
+      "through_line_state": "climbing fast into a tall bright tower as tokens arrive along filaments",
+      "shots": [
+        "SHOT 1 10.0-12.0s CU eye level: a single filament ignites and whips out of frame (impact beat)",
+        "SHOT 2 12.0-14.0s WIDE high angle: filaments fan outward across the plane, first three, then a dozen, then a grid, static",
+        "SHOT 3 14.0-16.0s ECU low angle: a new token arriving along a filament and landing onto the stack, slow push-in",
+        "SHOT 4 16.0-18.0s MEDIUM eye level: the stack climbing fast, brightening as it rises, gentle drift",
+        "SHOT 5 18.0-20.0s WIDE low angle: the stack now a tall bright tower against the dark, whip up its full length"
+      ],
+      "assets_used": ["token_stack", "filaments"]
+    },
+    {
+      "n": 3,
+      "arc_role": "turn",
+      "vo_line": "Here's why it only works on penny stocks: barely any reporting, and so few shareholders that one coordinated push moves everything. At the top, the insiders sell their entire position.",
+      "location": "abstract_plane",
+      "through_line_state": "at peak height and hollow, then the reserve block slides out from under it",
+      "shots": [
+        "SHOT 1 20.0-22.0s MEDIUM high angle: the tower's tokens revealed as thin and sparse, the structure hollow, static",
+        "SHOT 2 22.0-24.0s ECU low angle: one filament pulse runs the tower's height and the whole thing sways from that single push, gentle drift",
+        "SHOT 3 24.0-26.0s WIDE eye level: the tower at peak height, bright, filaments still feeding it, slow push-in",
+        "SHOT 4 26.0-28.0s CU low angle: at the base, the reserve block slides out in one hard move and exits frame (impact beat)",
+        "SHOT 5 28.0-30.0s MEDIUM eye level: the tower standing on nothing, the first tremor running upward, static (CTA lands here)"
+      ],
+      "assets_used": ["token_stack", "reserve_block", "filaments"]
+    },
+    {
+      "n": 4,
+      "arc_role": "payoff",
+      "vo_line": "The hype stops the same day, and the price falls back to nothing — this time held by the people who bought last. A stock worth nothing, and someone else's fortune.",
+      "location": "abstract_plane",
+      "through_line_state": "collapsed into a dull scattered spread, the reserve block far off and bright",
+      "shots": [
+        "SHOT 1 30.0-32.0s WIDE low angle: every filament goes dark at once and the tower loses its light (impact beat)",
+        "SHOT 2 32.0-34.0s ECU high angle: tokens separating at the top, slow push-in",
+        "SHOT 3 34.0-36.0s MEDIUM eye level: the tower collapsing into a scattered dull spread, static",
+        "SHOT 4 36.0-38.0s CU low angle: the dull tokens at rest where the tower stood, gentle drift",
+        "SHOT 5 38.0-40.0s WIDE high angle: the dull spread on one side, the reserve block far off on the other, large bright and untouched, easing into a settled hold"
+      ],
+      "assets_used": ["token_stack", "reserve_block"]
+    }
+  ],
+  "sources": [
+    "https://www.securities.utah.gov/communication-and-outreach/basic-definitions/boiler-rooms/",
+    "https://corporatefinanceinstitute.com/learn/resources/career-map/sell-side/capital-markets/pump-and-dump"
+  ],
+  "seo": {
+    "title": "Pump and Dump Explained: How a Worthless Stock Made Millions",
+    "description": "A stock worth nothing made someone a fortune — here's the illegal scheme behind it. Insiders quietly buy up a cheap penny stock, then rooms of salespeople work scripted call lists to hype it to strangers. It only works on penny stocks: barely any reporting, and so few shareholders that one coordinated push moves the price. At the top the insiders sell everything, the hype stops, and the price falls back to nothing. #Shorts #Stocks #WallStreet #Investing",
+    "hashtags": ["#Shorts", "#Stocks", "#WallStreet", "#Investing"],
+    "tags": ["pump and dump", "boiler room", "penny stocks", "securities fraud", "stock manipulation", "how pump and dump works", "wolf of wall street", "stock market explained", "investing for beginners", "market manipulation", "otc stocks", "financial crime"],
+    "cta_line": "Follow for more market mechanics explained like this.",
+    "cover_frame_note": "Block 1 shot 1 is the thumbnail: a small dull stack of tokens alone on a vast near-black plane, one hard reserve block snapping out of its base and sliding aside. Two shapes, extreme contrast, no text. Burned caption carries the hook from true 0.0s."
+  }
+}
