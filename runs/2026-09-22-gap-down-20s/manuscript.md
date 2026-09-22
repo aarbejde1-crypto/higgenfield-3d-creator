@@ -52,3 +52,34 @@ lines *is* the gap — the idea is the picture.
 
 Mechanism description only. No buy/sell/hold, no price target, no named security; the
 fifty/thirty figures are illustrative.
+
+---
+
+## Delivery
+
+| | |
+|---|---|
+| Captioned final | `7bd690b4-fb06-43ff-9c68-2537a76df2e9.mp4` (20 MB) |
+| Clean master | `bc50646b-90d5-47dc-952a-188b45b3330b.mp4` |
+| Runtime | 20.064s, 1440×2560, 24fps |
+| Captions | 11 cues, TikTok Sans bold, similarity 0.957, 46/46 words |
+
+Assembly: both blocks matched to ~−21.7 dB, speech centred at 0.73s and 0.81s,
+narration in both windows, no time-stretching. Mix −19.0 / −19.4 dB (0.4 dB spread).
+
+QC: block 1 six cuts, block 2 five cuts, both AAC. Final-frame luma 194 on block 2 —
+cream paper, no repeat of the black-void drift that cost a regeneration last run.
+Zero retries needed, which mattered: there was no budget for one.
+
+## Cost
+
+| | Credits |
+|---|---|
+| 2 video blocks | 40 |
+| 3 narration takes (one retake) | ~2.7 |
+| Images | 0 — style key and all plates reused |
+| **Spent** | **~42.7** |
+| **Remaining** | **3.6** |
+
+Reusing the boiler-room assets is the only reason this fit. A fresh style key plus
+plates would have been ~10 more and put the second block out of reach.
