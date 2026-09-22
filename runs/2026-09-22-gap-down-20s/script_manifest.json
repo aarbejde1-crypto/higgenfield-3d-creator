@@ -1,0 +1,48 @@
+{
+  "topic": "Why a stock can gap down 40% before the market even opens",
+  "channel_type": "explainer",
+  "style": "Editorial Motion Graphics, accent deep crimson",
+  "duration_seconds": 20,
+  "through_line": {
+    "name": "The price stack",
+    "asset": "a tall stack of monochrome halftone paper cards whose height is the price, plus two hand-drawn crimson marker lines",
+    "progression": "stack slams down with a crimson line at its crown -> a second line draws far below over bare paper -> the upper section tears away -> the short stack sits under a tall empty band",
+    "resolution": "a short stack under a tall band of bare cream paper, both crimson lines held: the gap made visible"
+  },
+  "arc": { "hook": 1, "payoff": 2 },
+  "blocks": [
+    {
+      "n": 1,
+      "arc_role": "hook",
+      "vo_line": "Your stock closed at fifty dollars and opens at thirty, with nobody trading a single share in between. That's a gap down.",
+      "location": "stage_disc",
+      "through_line_state": "tall, crimson line at its crown, second line far below, upper section tears away"
+    },
+    {
+      "n": 2,
+      "arc_role": "payoff",
+      "vo_line": "Overnight the market is shut, so sell orders queue. The open is an auction at one price, and nobody traded the space between.",
+      "location": "stage_grid",
+      "through_line_state": "short stack under a tall empty band, both crimson lines held"
+    }
+  ],
+  "sources": [
+    "https://www.nasdaqtrader.com/content/productsservices/trading/crosses/fact_sheet.pdf",
+    "https://www.nasdaq.com/glossary/g/gap-opening"
+  ],
+  "seo": {
+    "title": "Gap Down Explained: How a Stock Drops 40% With Zero Trades",
+    "description": "Your stock closed at fifty and opened at thirty — and nobody traded a single share in between. Overnight the market is shut, so sell orders just queue with no buyer to meet them. At the open an auction matches every queued order at one clearing price. That single print is the gap down, and the chart simply skips the space. #Shorts #Stocks #StockMarket #Investing",
+    "hashtags": ["#Shorts", "#Stocks", "#StockMarket", "#Investing"],
+    "tags": ["gap down", "premarket", "opening auction", "opening cross", "stock market basics", "why did my stock drop", "investing for beginners", "stock gap explained", "after hours news", "market mechanics"],
+    "cta_line": "Follow for more market mechanics explained like this.",
+    "cover_frame_note": "Block 1 shot 1: the tall card stack slamming onto the plinth with a crimson line snapping across its crown, cream stage, crimson half-disc behind. High contrast, no text."
+  },
+  "reused_assets": {
+    "note": "Zero new images generated. Style key and all asset plates reused from the 2026-09-17 boiler-room run.",
+    "stage_disc": "6a05bf50-9aa5-4ae3-ba79-ea1869a1957d",
+    "stage_grid": "7286724f-1fba-4e80-927d-4098ed51c176",
+    "card_stack": "ee5093ba-42df-4aa4-9bb7-de1c708b85d1",
+    "stroke_set": "c66d1373-a79c-438f-aec7-37c773c7b6d9"
+  }
+}
